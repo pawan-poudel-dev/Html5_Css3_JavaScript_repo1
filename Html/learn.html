@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoMart | Sustainable Living</title>
+    <link rel="stylesheet" href="EcoMart.css">
+    <style>
+        /* CSS specific to new sections */
+        :root {
+            --eco-green: #4CAF50;
+            --earth-brown: #5D4037;
+        }
+
+        body { font-family: sans-serif; margin: 0; padding: 0; background: #fdfdfd; }
+        
+        /* Header & Navigation Fixes */
+        header { display: flex; align-items: center; justify-content: space-around; padding: 10px; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .logotopleft { height: 50px; }
+        header a { text-decoration: none; color: #333; font-weight: bold; }
+
+        /* Auth Buttons */
+        .auth-section { display: flex; gap: 10px; align-items: center; }
+        #sign-out-btn { display: none; background: #ff4444; color: white; border: none; padding: 5px 10px; cursor: pointer; border-radius: 4px; }
+
+        /* Sections Visibility */
+        .page-section { display: none; padding: 40px 5%; max-width: 1200px; margin: 0 auto; }
+        .page-section.active { display: block; }
+
+        /* Product Box Design */
+        .productbox { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .product-card { border: 1px solid #ddd; padding: 15px; border-radius: 10px; text-align: center; background: white; }
+        .product-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 5px; }
+
+        /* Research Section */
+        .research-card { background: #e8f5e9; padding: 30px; border-radius: 15px; border-left: 8px solid var(--eco-green); margin-bottom: 20px; }
+
+        /* Blog Section */
+        .blog-item { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+        .blog-item h3 { color: var(--earth-brown); }
+
+        /* Search bar centering */
+        .search-container { text-align: center; margin: 20px 0; }
+        #search { padding: 10px; width: 60%; border: 1px solid #ccc; border-radius: 20px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="javascript:void(0)" onclick="showSection('home')">
+        <img src="https://via.placeholder.com/150x50?text=EcoMart" alt="EcoMart Logo" class="logotopleft">
+    </a>
+    <a href="javascript:void(0)" onclick="showSection('home')">Home</a>
+    <a href="javascript:void(0)" onclick="showSection('blog')">Blog</a>
+    <a href="javascript:void(0)" onclick="showSection('products')">Products</a>
+    <a href="javascript:void(0)" onclick="showSection('research')">Research</a>
+    
+    <div class="auth-section" id="auth-controls">
+        <a id="sign-in-link" href="Sign-up-EcoMart.html">Sign-up/Register</a>
+        <button id="sign-out-btn" onclick="handleAuth()">Sign Out</button>
+    </div>
+
+    <a href="Cart-EcoMart.html"><img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" width="30"></a>
+</header>
+
+<div class="search-container">
+    <input type="text" id="search" placeholder="Search for products..." onkeyup="filterProducts()">
+</div>
+
+<section id="products-section" class="page-section active">
+    <h2>Our Collection</h2>
+    <div class="productbox" id="product-container">
+        </div>
+</section>
+
+<section id="research-section" class="page-section">
+    <h2>Sustainability Research 2025</h2>
+    <div class="research-card">
+        <h3>Plastic Reduction Impact</h3>
+        <p>Our research shows that switching to bamboo utensils reduces household plastic waste by 12kg per year. 
+
+[Image of plastic waste reduction graph]
+</p>
+    </div>
+    <div class="research-card">
+        <h3>Carbon Footprint Analysis</h3>
+        <p>By sourcing locally, EcoMart has reduced delivery emissions by 40% compared to traditional retailers.</p>
+    </div>
+</section>
+
+<section id="blog-section" class="page-section">
+    <h2>EcoMart Blog</h2>
+    <div class="blog-item">
+        <h3>10 Ways to a Zero-Waste Kitchen</h3>
+        <p>Starting your journey to a sustainable lifestyle begins with the heart of the home...</p>
+        <a href="#">Read More</a>
+    </div>
+    <div class="blog-item">
+        <h3>The Truth About Compostable Plastics</h3>
+        <p>Not all "green" plastics are created equal. In this post, we break down what to look for...</p>
+        <a href="#">Read More</a>
+    </div>
+</section>
+
+<script>
+    // 1. Data
+    const products = [
+        { name: "Bamboo Straw Set", price: "$10", img: "https://images.unsplash.com/photo-1592892111425-15e04305f961?w=400" },
+        { name: "Organic Cotton Bag", price: "$15", img: "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=400" },
+        { name: "Glass Food Jars", price: "$22", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400" },
+        { name: "Wooden Spoons", price: "$12", img: "https://images.unsplash.com/photo-1594385208974-2e75f9d3bb4a?w=400" }
+    ];
+
+    // 2. Display Products
+    function displayProducts() {
+        const container = document.getElementById('product-container');
+        container.innerHTML = products.map(p => `
+            <div class="product-card">
+                <img src="${p.img}" alt="${p.name}">
+                <h3>${p.name}</h3>
+                <p>${p.price}</p>
+                <button style="background:var(--eco-green); color:white; border:none; padding:8px; border-radius:5px; cursor:pointer;">Add to Cart</button>
+            </div>
+        `).join('');
+    }
+
+    // 3. Navigation Logic
+    function showSection(sectionId) {
+        document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
+        if(sectionId === 'home' || sectionId === 'products') {
+            document.getElementById('products-section').classList.add('active');
+        } else {
+            document.getElementById(sectionId + '-section').classList.add('active');
+        }
+    }
+
+    // 4. Sign-In / Sign-Out Logic (Basic Simulation)
+    let isLoggedIn = false;
+    function handleAuth() {
+        isLoggedIn = !isLoggedIn;
+        const signBtn = document.getElementById('sign-out-btn');
+        const signLink = document.getElementById('sign-in-link');
+        
+        if(isLoggedIn) {
+            signBtn.style.display = "block";
+            signLink.style.display = "none";
+            alert("Signed in successfully!");
+        } else {
+            signBtn.style.display = "none";
+            signLink.style.display = "block";
+            alert("Signed out!");
+        }
+    }
+
+    // Initialize
+    displayProducts();
+</script>
+
+</body>
+</html>
