@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="Icon" href="/Icons/EcoMart Title(1).png" type="image/png">
+        <title>Cart - EcoMart</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <meta name="description" content="EcoMart Cart Page - View and manage your selected products before checkout.">
+        <meta name="keywords" content="eco-friendly, sustainable products, plastic-free, cart, checkout">
+        <meta name="author" content="pawan poudel">   
+        <meta name="robots" content="index, follow">
+        <link rel="stylesheet" href="EcoMart.css">
+        <style>
+            /*   this part provides style to  GLOBAL BODY  of the page */
+            body{
+                margin: 0px;
+                padding: 0px;
+                background-color: #f0f0f0; 
+                color: #a7a6a6; 
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                overflow-x: hidden;
+                display: flex; 
+                flex-direction: column; 
+                min-height: 100vh; 
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            
+            /*  text - decoration Remove default link styling  that means underline */
+            a{
+                text-decoration: none;
+            }
+            
+        
+            /* Container for quantity buttons and action buttons that we hae implemented  on the page  */
+            .item-controls {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            
+            /* this is  style for the  Remove button and Buy Now button shared styles both uses the same  styles */
+            .remove-btn, .buynow-btn {
+                padding: 8px 15px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: bold;
+                transition: 0.3s ease;
+            }
+            
+            /*  we have puted Red styling for remove button */
+            .remove-btn {
+                background-color: #ff6b6b; 
+                color: white; 
+            }
+            .remove-btn:hover {
+                background-color: #ff5252; 
+                transform: scale(1.05); 
+            }
+            
+            /*  and we have puted Green styling for Buy Now button whhich looks good */
+            .buynow-btn {
+                background-color: #4CAF50; 
+                color: white; 
+            }
+            .buynow-btn:hover {
+                background-color: #45a049; 
+                transform: scale(1.05); 
+            }
+
+
+            /* this section shows the empty cart message afte removing  items from the cart the spans full width when cart is empty */
+            .empty-message {
+                grid-column: 1 / -1;
+                text-align: center;
+                padding: 60px 20px;
+                background: linear-gradient(135deg, #fff3cd 0%, #ffe8a8 100%);
+                border-radius: 15px;
+                color: #666;
+                border: 2px solid #ffc107;
+            }
+            
+            .empty-message h2 {
+                margin: 20px 0 10px 0;
+                color: #333;
+                font-size: 28px;
+            }
+            
+            .empty-message p {
+                margin: 10px 0;
+                color: #666;
+                font-size: 16px;
+            }
+            
+            /*  style for the Browse Products button when it is in empty state */
+            .browse-btn {
+                display: inline-block;
+                margin-top: 20px;
+                padding: 14px 40px;
+                background-color: #4CAF50;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                font-size: 16px;
+                transition: 0.3s ease;
+                border: none;
+                cursor: pointer;
+            }
+            .browse-btn:hover {
+                background-color: #45a049;
+                transform: scale(1.05);
+            }
+            
+            /*  this section is for the Notifications animations */
+            /*  here  is Slide in from right animation for notifications   slides to the right */
+            @keyframes slideIn {
+                from {
+                    transform: translateX(400px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            /*  Slide out to right animation for notifications, this makes the notifications slides to right  */
+            @keyframes slideOut {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(400px);
+                    opacity: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!--header Navigation bar -->
+        <!--   here we have implemented Top navigation bar with logo, blog, about, research links, and login/register buttons -->
+        <header> 
+            <div class="wel">Welcome to EcoMart</div>
+            <div class="comp">
+                <a class="blog" href="Blog-EcoMart.html">Blog</a>
+                <a class="about" href="About-EcoMart.html">About Us</a>
+                <a class="research" href="Research-EcoMart.html">Research</a>
+            </div>
+            <div class="logreg">
+                <a href="Login-EcoMart.html" class="login">Login</a>
+                <a href="Register-EcoMart.html" class="register">Register</a>
+            </div>
+        </header>
+        
+    
+        <!-- this section is for the  Secondary header with logo, home/products nav, search bar, and cart/wishlist icons -->
+        <div class="secondheader">
+            <div class="logotopleft">
+            <a href="/Web Pages/Home-EcoMart.html">
+                <img src="/Icons/EcoMart.png" alt="EcoMart Logo" style="width: 125px; height: 44px;">
+            </a>
+            </div>
+            <div class="cust">
+                <a class="home" href="/Web Pages/Home-EcoMart.html">Home</a>
+                <a class="products" href="Products-EcoMart.html">Products</a>
+            </div>
+            <!-- this is a search bar section -->
+            <div class="searchbar">
+                <div class="search">
+                    <input type="text" name="Search" placeholder="Search for products..." class="searchText">
+                </div>
+                <div class="button">
+                    <button class="searchBtn"></button>
+                </div>
+            </div>
+            <!--   we have passed the Wishlist and cart icons  from the icons of the  icons folder  -->
+            <div class="itembox">
+                <a class="wishlist" href="Wishlist-EcoMart.html">
+                    <img src="/Icons/heart-solid.png" alt="WishList Icon" height="40px" width="40px">
+                </a>
+                <a class="cart" href="Cart-EcoMart.html">
+                    <img src="/Icons/cart.png" alt="Cart Icon" height="40px" width="40px">
+                </a>
+            </div>
+        </div>
+
+        <!-- from shopping cart section starts  -->
+        <div class="container1">
+            <!-- this is for the  cart header  -->
+            <!-- we have impleemented page-->
+            <div class="cart-header">
+                <h1>Shopping Cart</h1>
+            </div>
+
+            <!--   here we can filter the category of different products and their category  -->
+            <!-- Buttons to filter products by category: All, Personal Care, Kitchen, Lifestyle, Cleaning  profducts that we have implemented on the  product page -->
+            <div class="category-filter">
+                <button class="category-btn active" onclick="filterCategory(event, 'all')">All Categories</button>
+                <button class="category-btn" onclick="filterCategory(event, 'personal-care')">Personal Care</button>
+                <button class="category-btn" onclick="filterCategory(event, 'kitchen')">Kitchen Items</button>
+                <button class="category-btn" onclick="filterCategory(event, 'lifestyle')">Lifestyle</button>
+                <button class="category-btn" onclick="filterCategory(event, 'cleaning')">Home & Cleaning</button>
+            </div>
+
+            <!-- MAIN LAYOUT of the page  where there is  Two column: Products on left, Summary on right   part of the page -->
+            <div class="cart-content">
+                <!-- LEFT SIDE  we have puted product lists  -->
+                <!-- this is a Container that will be populated with cart items with the help of the  JavaScript -->
+                <div class="cart-items" id="cartItems"></div>
+
+                <!-- on the RIGHT SIDE we have impplemented rice summary -->
+                <!--  which Shows subtotal, delivery charges, tax, and total cost and changes the price accordingly  -->
+                <div class="cart-summary">
+                    <div class="summary-item">
+                        <span class="summary-label">Subtotal:</span>
+                        <span class="summary-value" id="subtotal">₨0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Delivery Charge:</span>
+                        <span class="summary-value" id="shipping">₨0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Tax:</span>
+                        <span class="summary-value" id="tax">₨0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label" style="font-weight: bold;">Total:</span>
+                        <span class="summary-value" id="total">₨0.00</span>
+                    </div>
+                    <!--  this is main checkout button from where we get the actual price of the product -->
+                    <button class="checkout-btn" style="background-color: green;" onclick="proceedCheckout()">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+
+        <!--  from here footer section starts  -->
+    
+        <div class="foot">
+            <div class="secondfooter">
+                <div class="bottomLink">
+                    <img src="/Icons/EcoMart.png" alt="EcoMart Logo" style="width: 250px; height: 88px; position: relative; float: right; margin-top: 25px;">
+                    <!--  we have implemented Social media links   on the bottom side of the  footer section as well-->
+                    <div class="social">
+                        <a href="https://youtu.be/dQw4w9WgXcQ?si=kJT0Y42J-oUOEi-n">
+                            <img src="/Icons/youtube-brands-solid-full.png" alt="youtube" class="yt">
+                        </a>
+                        <a href="https://www.instagram.com/reel/CfIEj18pjAz/?igsh=MXVndTluemhuaWVreQ==">
+                            <img src="/Icons/instagram-brands-solid-full.png" alt="instagram" class="insta">
+                        </a>
+                        <a href="https://www.facebook.com/share/p/1G6SPSyAAy/">
+                            <img src="/Icons/facebook-brands-solid-full.png" alt="facebook" class="fb">
+                        </a>
+                        <a href="https://x.com/allreactionvidz/status/1249541936991604737?s=20">
+                            <img src="/Icons/square-x-twitter-brands-solid-full.png" alt="twitter" class="tweet">
+                        </a>
+                        <a href="https://pin.it/4QQPtgu0i">
+                            <img src="/Icons/pinterest-brands-solid-full.png" alt="pinterest" class="pin">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- on the left side of the footer we have implemented Customer Service section -->
+                <div class="customerservice" style="margin-left: 200px; margin-right: auto; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                    <div style="font-weight: bold; color: black; margin-left: 25px; margin-top: 0px;">
+                        <h3>Customer Service</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="/Web Pages/Home-EcoMart.html"  style="color: black; font-size: 18px;">Home</a>
+                        </li>
+                        <li>
+                            <a href="Products-EcoMart.html" style="color: black; font-size: 18px;">Products</a>
+                        </li>
+                        <li>
+                            <a href="Wishlist-EcoMart.html" style="color: black; font-size: 18px;">WishList</a>
+                        </li>
+                        <li>
+                            <a href="Cart-EcoMart.html" style="color: black; font-size: 18px;">Cart</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--   we have a company information section on the right side  of the footer  -->
+                <div class="company" style="margin-right: 450px; margin-left: auto; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                    <div style="font-weight: bold; color: black; margin-left: 25px; margin-top: 0px;">
+                        <h3>Get to know us</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="Blog-EcoMart.html" style="color: black; font-size: 18px;">Blog</a>
+                        </li>
+                        <li>
+                            <a href="About-EcoMart.html" style="color: black; font-size: 18px;">About Us</a>
+                        </li>
+                        <li>
+                            <a href="Research-EcoMart.html" style="color: black; font-size: 18px;">Research</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--  we have also implemented Copyright notice -->
+            <div class="copyright">
+                Copyright © 2026 Ecomart Store. All Rights Reserved.
+            </div>
+        </div>
+
+        <!-- from here notifcation system starts  -->
+        <script>
+            /**
+             * FUNCTION: showNotification()
+             * purpose of  using function on the notificctions is to  Displays a floating toast notification in the top-right corner off the page
+             * 
+             * @param {string} message - The text to display in the notification
+             * @param {string} type  and we have implemented notification types :if the item successfully loaded then shows notification with  'success' (green), 'error' (red), or 'info' (blue)
+             * 
+             * logic part of  the function,
+             * - I Creates notification dynamically and appends to DOM
+             * - Auto-hides after 3 seconds with fade-out animation
+             * - Uses CSS animations (slideIn/slideOut) for smooth transitions
+             * - Removes element from DOM after animation completes
+             */
+            function showNotification(message, type = 'success') {
+                // Create a new div element to hold the notification in a  block 
+                const notification = document.createElement('div');
+                notification.textContent = message;
+                
+                //  for positioning, appearance, and animation i have used inline css styles
+                notification.style.cssText = `<!--JavaScript used to apply multiple CSS styles at once to an element.
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    padding: 15px 20px;
+                    border-radius: 5px;
+                    color: white;
+                    font-weight: bold;
+                    z-index: 99999;
+                    animation: slideIn 0.3s ease-in-out;
+                    background-color: ${type === 'success' ? '#4CAF50' : type === 'error' ? '#f44336' : '#2196F3'};
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+                `;
+                
+                // Add the notification to the pages
+                document.body.appendChild(notification);
+                
+                // thiss function  Sets timeout to trigger fade-out animation after 3 seconds
+                setTimeout(() => {
+                    // Change animation to slideOut after 3seconds 
+                    notification.style.animation = 'slideOut 0.3s ease-in-out';
+                    
+                    //  setTimrOut Removes notification from DOM after slide-out animation (300ms) completes
+                    setTimeout(() => notification.remove(), 300);
+                }, 3000);
+            }
+        </script>
+
+        <!-- CART FUNCTIONALITY using the Main JJavaScript for cart operations -->
+        <script>
+        
+            // Each product has id, name, category, description, price (Nepali  Rupees), quantity, and image
+            const allProducts = [
+                { id: 1, name: "Bamboo toothbrush", category: "personal-care", description: "Eco-friendly bamboo toothbrush with biodegradable bristles", price: 85, quantity: 1, image: "/Product Images/Personal Care Items/Bamboo Toothbrush Set of 4_ Eco-friendly Soft Bristles, Sustainable Oral Care - Etsy.jpg" },
+                { id: 2, name: "Reusable Makeup Remover Pads", category: "personal-care", description: "Reusable pads for makeup removal", price: 150, quantity: 1, image: "/Product Images/Personal Care Items/High Quality Makeup Remover Sponges Free Sample Ribbon Private Label Beauty Accessories Facial  Pad.jpg" },
+                { id: 3, name: "Stainless steel lunch box", category: "kitchen", description: "Stainless steel lunch box with airtight seal", price: 700, quantity: 1, image: "/Product Images/Kitchen Items/Wearth joins forces with Veo.jpg" },
+                { id: 4, name: "Reusable coffee filters of set 50", category: "kitchen", description: "Reusable coffee filter made with durable fiber", price: 333, quantity: 1, image: "/Product Images/Kitchen Items/Paperless Reusable Pour Over Coffee Filter Durable Fine Mesh Stainless Steel Cone Strainer V Shaped.jpg" },
+                { id: 5, name: "Reusable Water Bottle (Bamboo)", category: "lifestyle", description: "Reusable water bottle made from bamboo and no plastic", price: 1889, quantity: 1, image: "/Product Images/Lifestyle items/Portable Vacuum Flask Coffee Cup - New Bamboo Thermos Stainless Steel Water Bottle Tumbler, 350_450ml Capacity - 350ml-450ml _ H-350ml.jpg" },
+                { id: 6, name: "A5 Eco-friendly notebook set of 5", category: "lifestyle", description: "High quality notebook made from papers using high quality fibers.", price: 650, quantity: 1, image: "/Product Images/Lifestyle items/Caderno Kraft para Anotações A5 _ Shopee Brasil.jpg" },
+                { id: 7, name: "Reusable Microfiber Mop", category: "cleaning", description: "Reusable microfiber mop made with natural fibers", price: 280, quantity: 1, image: "/Product Images/Home & Cleaning items/2 Reusable Dry Sweeping Cloths Microfiber Wet Mop Pads Fits Sweepers Mop Replace.jpg" },
+                { id: 8, name: "Biodegradable Trash Bags", category: "cleaning", description: "Biodegradable trash bags made from biodegradable materials", price: 1646, quantity: 1, image: "/Product Images/Home & Cleaning items/iDemaya Small Trash Bags, Biodegradable 2_6 Gallon Extra Thick Garbage Bags, Recycling & Degradable Rubbish Bags Wastebasket Liners for Kitchen B.jpg" }
+            ];
+
+            //  this all are state variables to track cart items and current filter category
+            let cartItems = [...allProducts];  // Copy of all products currently in cart so athat they fit in the different category  (uses spread operator to avoid reference issues)
+            let currentCategory = 'all';       // Tracks which category filter is currently active
+
+            /**
+    
+             * 
+             * @param {Event} event  this helps to  click event from the category button
+             * @param {string} category - The category to filter by like  'personal-care', 'kitchen',  and all shown on the top of the page )
+             * 
+             * LOGIC part of the function 
+             * firstly, Update currentCategory variable
+             * secondly,Remove 'active' class from all category buttons
+             * thirdky,active' class to the clicked button
+             * lastly,Call renderCart() to update display with filtered items
+             */
+            function filterCategory(event, category) {
+                currentCategory = category;
+                
+                // Remove 'active' styling from all category buttons
+                document.querySelectorAll('.category-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Add 'active' styling to the clicked button
+                event.target.classList.add('active');
+                
+                // Re-rendering  with filtered items
+                renderCart();
+            }
+
+            /**
+             * FUNCTION: renderCart()
+             * Renders the shopping cart display with filtered items
+             * 
+             * LOGIC part of the function:
+             *  Filtering  items based on currentCategory selection 
+             *  If no items match filter, display empty cart message at last 
+             *  Update price summary after rendering
+             
+             */
+            function renderCart() {
+                const cartContainer = document.getElementById('cartItems');
+                
+                // Filter items based on selected category that we have implemented on the top of the page
+                // If 'all' is selected, show all items; otherwise filter by category according to their category property 
+                let filteredItems = currentCategory === 'all' 
+                    ? cartItems 
+                    : cartItems.filter(item => item.category === currentCategory);
+
+                // Check if any items match the current filter or not 
+                if (filteredItems.length === 0) {
+                    // Display empty cart message with link to browse products from theproduct page 
+                    cartContainer.innerHTML = `
+                        <div class="empty-message">
+                            <div style="font-size: 60px;"></div>
+                            <h2>Your Cart is Empty</h2>
+                            <p>Start shopping to add eco-friendly products to your cart!</p>
+                            <a href="Products-EcoMart.html" class="browse-btn">Browse Products</a>
+                        </div>
+                    `;
+                    updateSummary();
+                    return;
+                }
+
+                // Generate HTML for each cart item using map() function
+                // Template includes: image, category, name, description, price, quantity controls, action buttons
+                cartContainer.innerHTML = filteredItems.map(item => `
+                    <div class="cart-item">
+                        <div class="item-image">
+                            <!-- Image with onerror fallback: if image fails to load, display placeholder SVG -->
+                            <img src="${item.image}" alt="${item.name}" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect fill=%22%23f5f5f5%22 width=%22100%22 height=%22100%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2212%22 fill=%22%23999%22 text-anchor=%22middle%22 dy=%22.3em%22%3EProduct%3C/text%3E%3C/svg%3E'">
+                        </div>
+                        <div class="item-details">
+                            <!-- Category label: converted to uppercase with hyphens replaced by spaces -->
+                            <div class="item-category">${item.category.replace('-', ' ').toUpperCase()}</div>
+                            <div class="item-name">${item.name}</div>
+                            <div class="item-description">${item.description}</div>
+                            <!-- Price formatted with thousand separators using toLocaleString() -->
+                            <div class="item-price">₨${(item.price).toLocaleString('en-US')}</div>
+                            <div class="item-controls">
+                                <!-- Quantity selector with minus/plus buttons -->
+                                <div class="qty-control">
+                                    <button onclick="updateQuantity(${item.id}, -1)">−</button>
+                                    <input type="number" value="${item.quantity}" readonly>
+                                    <button onclick="updateQuantity(${item.id}, 1)">+</button>
+                                </div>
+                                <!-- Buy Now button: purchases this single item -->
+                                <button class="buynow-btn" onclick="buyNow(${item.id})">Buy Now</button>
+                                <!-- Remove button: deletes item from cart -->
+                                <button class="remove-btn" onclick="removeItem(${item.id})">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');  // join() converts array of HTML strings to single string
+
+                // Update price summary after rendering items + or -
+                updateSummary();
+            }
+
+            /**
+             *  when we increase or decrease updateQuantity()
+             * Increases or decreases the quantity of a cart item
+             * 
+             * @param {number} id - The product ID to update
+             * @param {number} change - Amount to change quantity by (1 for increase, -1 for decrease)
+             * 
+             * LOGIC part of the function:
+             * 1. Find the product with matching ID first 
+             * 2. and then  Add the change value to current quantity
+             * 3. after thaat Prevent quantity from going below 1 (minimum order is 1)
+             * 4.at last, Re-render cart to update display
+             */
+            function updateQuantity(id, change) {
+                // Find product by ID using find() method
+                const item = cartItems.find(i => i.id === id);
+                if (item) {
+                    // Update quantity
+                    item.quantity += change;
+                    
+                    //  this Ensure quantity never drops below 1
+                    if (item.quantity < 1) item.quantity = 1;
+                    
+                    // Re-render cart  which reflect quantity change
+                    renderCart();
+                }
+            }
+
+            /**
+             * FUNCTION  for thee buy now : buyNow()
+             *   which Handles "Buy Now" button click for a single item
+             * 
+             * @param {number} id  The product ID to purchase immediately for each item 
+             * 
+             * LOGIC:
+             * 1. first, Find the product by ID
+             * 2.  we have Calculate price ,
+             *    for  Item total = price × quantity
+             *    for Tax = 10% of item total
+             *   for  Shipping = Free if >100, otherwise 10%
+             *     for Grand Total = item total + tax + shipping
+             * 3. Display confirmation dialog with all details
+             * 4. If user confirms, show success notification on the right corner 
+             */
+            function buyNow(id) {
+                // Find the product with matching ID
+                const item = cartItems.find(i => i.id === id);
+                if (item) {
+                    // Calculate price for this item only
+                    const itemTotal = item.price * item.quantity;
+                    const tax = itemTotal * 0.1;  // 10% tax
+                    // Shipping: free if order > 100 PKR, otherwise 10% of order
+                    const shipping = itemTotal > 100 ? 0 : itemTotal * 0.1;
+                    const grandTotal = itemTotal + tax + shipping;
+
+                    // Format confirmation message with price breakdown
+                    const message = `Ready to checkout?\n\nProduct: ${item.name}\nQuantity: ${item.quantity}\nPrice: ₨${itemTotal.toLocaleString('en-US')}\nTax: ₨${tax.toLocaleString('en-US')}\nShipping: ₨${shipping.toLocaleString('en-US')}\n\nTotal: ₨${grandTotal.toLocaleString('en-US')}`;
+                    
+                    // Show confirmation dialog (window.confirm returns true if user clicks OK)
+                    if (window.confirm(message)) {
+                        // Show success notification
+                        showNotification('✓ Order placed successfully! Thank you!', 'success');
+                    }
+                }
+            }
+
+            /**
+             * FUNCTION: removeItem()
+             * PURPOSE: Removes a product from the shopping cart
+             * 
+             * @param {number} id - The product ID to remove
+             * 
+             * LOGIC:
+             * 1. Find the item to get its name for notification
+             * 2. Find the array index of the item
+             * 3. Show notification that item was removed
+             * 4. Remove item from cartItems array using splice()
+             * 5. Re-render cart to update display
+             */
+            function removeItem(id) {
+                // Get the item for its name (to show in notification)
+                const item = cartItems.find(i => i.id === id);
+                // Find the array index of the item
+                const index = cartItems.findIndex(i => i.id === id);
+                
+                if (index > -1) {
+                    // Show info notification with the removed item's name
+                    showNotification('✗ ' + item.name + ' removed from cart', 'info');
+                    
+                    // Remove the item from the cart array
+                    // splice(index, 1) removes 1 element starting at index
+                    cartItems.splice(index, 1);
+                    
+                    // Re-render cart to update display
+                    renderCart();
+                }
+            }
+
+            /**
+             * FUNCTION: proceedCheckout()
+             * PURPOSE: Handles checkout for entire cart
+             * 
+             * LOGIC:
+             * 1. Validate that cart is not empty
+             * 2. Calculate totals for entire cart:
+             *    - Subtotal = sum of (price × quantity) for all items
+             *    - Tax = 10% of subtotal
+             *    - Shipping = Free if >100, otherwise 10%
+             *    - Total = subtotal + tax + shipping
+             * 3. Display confirmation dialog with full order summary
+             * 4. If confirmed: show success message and reset cart
+             */
+            function proceedCheckout() {
+                // Prevent checkout if cart is empty
+                if (cartItems.length === 0) {
+                    showNotification('Your cart is empty!', 'error');
+                    return;
+                }
+
+                // Calculate subtotal by summing all item costs
+                // reduce() accumulates the sum of (price × quantity) for each item
+                const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                
+                // Calculate shipping: free if >100 PKR, otherwise 10% of subtotal
+                const shipping = subtotal > 100 ? 0 : subtotal * 0.1;
+                
+                // Calculate tax: 10% of subtotal
+                const tax = subtotal * 0.1;
+                
+                // Calculate final total
+                const total = subtotal + shipping + tax;
+
+                // Format order summary message with all line items and totals
+                const message = `Order Summary:\n\nSubtotal: ₨${subtotal.toLocaleString('en-US')}\nDelivery Charge: ₨${shipping.toLocaleString('en-US')}\nTax: ₨${tax.toLocaleString('en-US')}\n\nTotal: ₨${total.toLocaleString('en-US')}\n\nProceed to checkout?`;
+                
+                // Show confirmation dialog
+                if (window.confirm(message)) {
+                    // Show success notification
+                    showNotification(' Order placed successfully! Thank you for shopping!', 'success');
+                    
+                    // Reset cart to all products (simulates clearing after purchase)
+                    cartItems = [...allProducts];
+                    
+                    // Re-render cart with all products
+                    renderCart();
+                }
+            }
+
+            /**
+             * FUNCTION: updateSummary()
+             * PURPOSE: Updates the price summary display (subtotal, shipping, tax, total)
+             * 
+             * CALLED BY: renderCart() and every function that modifies cart
+             * 
+             * LOGIC:
+             * 1. Calculate subtotal: sum of (price × quantity) for all items using reduce()
+             * 2. Calculate shipping: free if subtotal >100, otherwise 10%
+             * 3. Calculate tax: 10% of subtotal
+             * 4. Calculate total: subtotal + shipping + tax
+             * 5. Update all summary display elements with formatted values
+             * 
+             * FORMATTING:
+             * - Uses toLocaleString('en-US') to add thousand separators
+             * - Example: 1234567 becomes "1,234,567"
+             */
+            function updateSummary() {
+                // Calculate subtotal: iterate through all cart items and sum their costs
+                // reduce(callback, initialValue) - initialValue is 0
+                // For each item: add (item.price × item.quantity) to running sum
+                const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                
+                // Calculate shipping cost
+                // Free shipping if subtotal exceeds 100 PKR, otherwise charge 10%
+                const shipping = subtotal > 100 ? 0 : subtotal * 0.1;
+                
+                // Calculate tax: 10% of subtotal
+                const tax = subtotal * 0.1;
+                
+                // Calculate grand total
+                const total = subtotal + shipping + tax;
+
+                // Update all DOM elements with calculated values
+                // toLocaleString() formats numbers with thousand separators
+                document.getElementById('subtotal').textContent = '₨' + subtotal.toLocaleString('en-US');
+                document.getElementById('shipping').textContent = '₨' + shipping.toLocaleString('en-US');
+                document.getElementById('tax').textContent = '₨' + tax.toLocaleString('en-US');
+                document.getElementById('total').textContent = '₨' + total.toLocaleString('en-US');
+            }
+
+            // INITIALIZATION - Called when page loads
+            // Renders initial cart display with all products
+            renderCart();
+        </script>
+    </body>
+</html>

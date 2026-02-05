@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="Icon" href="/Icons/EcoMart Title(1).png" type="image/png"> <!-- Sets the title picture for the webpage -->
+        <title>Products - EcoMart</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Adjusts layout for different screen sizes-->
+        <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 -->
+        <meta name="description" content="EcoMart Products - Browse our collection of eco-friendly sustainable products"><!--Description of the webpage for SEO-->
+        <meta name="keywords" content="eco-friendly, sustainable products, plastic-free"><!--Keywords relevant to the webpage for SEO-->
+        <meta name="author" content="pawan poudel">  <!--Author of the webpage-->
+        <meta name="robots" content="index, follow"><!--Instructs search engines to index the page and follow links-->
+        <link rel="stylesheet" href="EcoMart.css"> <!-- Links to external CSS file for styling -->
+        <style> /*Internal CSS*/
+            body{
+                margin: 0px;
+                padding: 0px;
+                background-repeat: no-repeat;
+                background-color:aliceblue;
+                background-size: cover;
+                background-attachment: fixed;
+                overflow-x: hidden;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            a{
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header> 
+            <div class="wel">Welcome to EcoMart</div>
+            <div class="comp"><!--Container to store page hyperlinks-->
+                <a class="blog" href="Blog-EcoMart.html">Blog</a> <!-- Navigation link to Blog page -->
+                <a class="about" href="About-EcoMart.html">About Us</a> <!-- Navigation link to About Us page -->
+                <a class="research" href="Research-EcoMart.html">Research</a> <!-- Navigation link to Research page -->
+            </div>
+            <div class="logreg">
+                <a href="Login-EcoMart.html" class="login">Login</a><!--Button for login pop-up-->
+                <a href="Register-EcoMart.html" class="register">Register</a><!--Button for register pop-up-->
+            </div>
+        </header>
+        <div class="secondheader"> <!--Container for a second header-->
+            <div class="logotopleft">
+                <a href="/Web Pages/Home-EcoMart.html">
+                    <img src="/Icons/EcoMart.png" alt="EcoMart Logo" style="width: 125px; height: 44px;"> <!-- Logo image linking to home page -->
+                </a>
+            </div>
+            <div class="cust"><!--Container to store page hyperlinks-->
+                <a class="home" href="/Web Pages/Home-EcoMart.html">Home</a> <!-- Navigation link to Home page -->
+                <a class="products" href="Products-EcoMart.html">Products</a> <!-- Navigation link to Product page -->
+            </div>
+            <div class="searchbar"><!--Container to store search bar elements-->
+                <div class="search">
+                    <input type="text" name="Search" placeholder="Search for products..." class="searchText"> <!--Text bar for product search-->
+                </div>
+                <div class="button">
+                    <button class="searchBtn"></button><!--Search button for search-->
+                </div>
+            </div>
+            <div class="itembox"> <!--Container to store store page icons-->
+                <a class="wishlist" href="Wishlist-EcoMart.html">
+                    <img src="/Icons/heart-solid.png" alt="WishList Icon" height="40px" width="40px">
+                </a> <!-- Navigation link to WishList page -->
+                <a class="cart" href="Cart-EcoMart.html">
+                    <img src="/Icons/cart.png" alt="Cart Icon" height="40px" width="40px">
+                </a> <!-- Navigation link to Cart page -->
+            </div>
+        </div>
+        <div class="fp"><!--Container holding the filter and products-->
+            <div class="prod"><!--Container holding the products-->
+                <h2 id="pers">Personal Care Items</h2><!--Code for Personal care items-->
+                <div class="personalcare">
+                    <button class="personal-arrow-left"></button><!--Left arrow button to navigate between sets of items-->
+                    <div class="personal-container"><!--Container for personal care items-->
+                        <div class="personal active"><!--This container displays the set of items-->
+                            <a class="item" data-images='["/Product Images/Personal Care Items/Eco-Friendly Bamboo Toothbrush 🌿 _ Bambelle.jpg","/Product Images/Personal Care Items/Bamboo Toothbrush Set of 4_ Eco-friendly Soft Bristles, Sustainable Oral Care - Etsy.jpg"]'><!--A hyperlink containing the product image and details along with image dataset-->
+                        <div>
+                            <img src="/Product Images/Personal Care Items/Bamboo Toothbrush Set of 4_ Eco-friendly Soft Bristles, Sustainable Oral Care - Etsy.jpg" alt="item" class="itemImage"><!--First image of the product-->
+                            <span class="itmName">Bamboo toothbrush</span><!--Name of product-->
+                            <span class="rate"><!--Ratings given to the product-->
+                                <span class="star" style="color: gold;">★</span>
+                                <span class="star" style="color: gold;">★</span>
+                                <span class="star" style="color: gold;">★</span>
+                                <span class="star" style="color: gold;">★</span>
+                                <span class="star" style="color: gold;">★</span>
+                            </span>
+                            <span class="stock">2k+ in stock</span>
+                            <span class="pricedis">
+                                <span class="price">Rs.85</span>
+                                <label style="color: gray; margin-left: 5px;">-/</label><span class="OgPrice">Rs.200</span>
+                                <span class="dis">-57%</span>
+                            </span>
+                        </div>
+                    </a>
+                <a class="item" data-images='["/Product Images/Personal Care Items/ClEAN SPONGE.jpg","/Product Images/Personal Care Items/Comes in a set of 4.jpg","/Product Images/Personal Care Items/High Quality Makeup Remover Sponges Free Sample Ribbon Private Label Beauty Accessories Facial  Pad.jpg"]'>
+                    <div>
+                        <img src="/Product Images/Personal Care Items/High Quality Makeup Remover Sponges Free Sample Ribbon Private Label Beauty Accessories Facial  Pad.jpg" alt="item" class="itemImage">
+                        <span class="itmName">Reusable Makeup Remover Pads</span>
+                        <span class="rate">
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                        </span>
+                        <span class="stock">1k+ in stock</span>
+                        <span class="pricedis">
+                            <span class="price">Rs.150</span>
+                            <label style="color: gray; margin-left: 5px;">-/</label><span class="OgPrice">Rs.175</span>
+                            <span class="dis">-40%</span>
+                        </span>
+                    </div>
+                </a>
+                <a class="item" data-images='["/Product Images/Personal Care Items/download.jpg","/Product Images/Personal Care Items/Ultra Soft Cotton Towels for Everyday Comfort.jpg","/Product Images/Personal Care Items/The softest towels youll ever own, they dry quickly, and look good, too_.jpg"]'>
+                    <div>
+                        <img src="/Product Images/Personal Care Items/The softest towels youll ever own, they dry quickly, and look good, too_.jpg" alt="item" class="itemImage">
+                        <span class="itmName">Organic Cotton Face Towels</span>
+                        <span class="rate">
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                        </span>
+                        <span class="stock">321 in stock</span>
+                        <span class="pricedis">
+                            <span class="price">Rs.1120</span>
+                            <label style="color: gray; margin-left: 5px;">-/</label><span class="OgPrice">Rs.2495</span>
+                            <span class="dis">-55%</span>
+                        </span>
+                    </div>
+                </a>
+                <a class="item" data-images='["/Product Images/Personal Care Items/Kelp + Seaweed Natural Soap Bars__Coconut Oil, Olive oil, African shea butter__No Coloring(natural) and Fragrance Free.jpg","/Product Images/Personal Care Items/Moringa soap with Mellon fragrance_.jpg","/Product Images/Personal Care Items/Natural neem soap.jpg"]'>
+                    <div>
+                        <img src="/Product Images/Personal Care Items/Natural neem soap.jpg" alt="item" class="itemImage">
+                        <span class="itmName">Natural neem soap</span>
+                        <span class="rate">
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                        </span>
+                        <span class="stock">5k+ in stock</span>
+                        <span class="pricedis">
+                            <span class="price">Rs.325</span>
+                            <label style="color: gray; margin-left: 5px;"></label><span class="OgPrice"></span>
+                            <span class="dis"></span>
+                        </span>
+                    </div>
+                </a>
+                <a class="item" data-images='["/Product Images/Personal Care Items/shop now! reusable hand wash & lotion bottles.jpg","/Product Images/Personal Care Items/shop reusable shower bottles now!.jpg"]'>
+                    <div>
+                        <img src="/Product Images/Personal Care Items/shop reusable shower bottles now!.jpg" alt="item" class="itemImage">
+                        <span class="itmName">Refillable Shampoo and conditioner Bottles</span>
+                        <span class="rate">
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                        </span>
+                        <span class="stock">3k+ in stock</span>
+                        <span class="pricedis">
+                            <span class="price">Rs.130</span>
+                            <label style="color: gray; margin-left: 5px;"></label><span class="OgPrice"></span>
+                            <span class="dis"></span>
+                        </span>
+                    </div>
+                </a>
+                        </div>
+                        <div class="personal"><!--This container doesnot display the set of items-->
+                            <a class="item" data-images='["/Product Images/Personal Care Items/2 Pcs Silicone Exfoliating Body Scrubber Silicone Body Shampoo Brush Massager - Gray.jpg"]'>
+                                <div>
+                                    <img src="/Product Images/Personal Care Items/2 Pcs Silicone Exfoliating Body Scrubber Silicone Body Shampoo Brush Massager - Gray.jpg" alt="item" class="itemImage">
+                                    <span class="itmName">Silicone Exfoliating Body Scrubber</span>
+                                    <span class="rate">
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                    </span>
+                                    <span class="stock">500+ in stock</span>
+                                    <span class="pricedis">
+                                        <span class="price">Rs.290</span>
+                                        <label style="color: gray; margin-left: 5px;">-/</label><span class="OgPrice">Rs.500</span>
+                                        <span class="dis">-42%</span>
+                                    </span>
+                                </div>
+                            </a>
+                            <a class="item" data-images='["/Product Images/Personal Care Items/Dabur Red Toothpaste 100gm.jpg","/Product Images/Personal Care Items/DABUR Red Toothpaste 100g_200g readystocks__.jpg"]'>
+                                <div>
+                                    <img src="/Product Images/Personal Care Items/DABUR Red Toothpaste 100g_200g readystocks__.jpg" alt="item" class="itemImage">
+                                    <span class="itmName">Dabur Red Toothpaste 80g</span>
+                                    <span class="rate">
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                    </span>
+                                    <span class="stock">340 in stock</span>
+                                    <span class="pricedis">
+                                        <span class="price">Rs.300</span>
+                                        <label style="color: gray; margin-left: 5px;"></label><span class="OgPrice"></span>
+                                        <span class="dis"></span>
+                                    </span>
+                                </div>
+                            </a>
+                            <a class="item" data-images='["/Product Images/Personal Care Items/Solana Eco-Friendly Lip Balm.jpg","/Product Images/Personal Care Items/Envase De Desodorante En Tubo De Pape.jpg","/Product Images/Personal Care Items/Solana Eco-Friendly Lip Balm (1).jpg"]'>
+                                <div>
+                                    <img src="/Product Images/Personal Care Items/Solana Eco-Friendly Lip Balm (1).jpg" alt="item" class="itemImage">
+                                    <span class="itmName">Eco-Friendly Lip Balm</span>
+                                    <span class="rate">
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                    </span>
+                                    <span class="stock">500+ in stock</span>
+                                    <span class="pricedis">
+                                        <span class="price">Rs.150</span>
+                                        <label style="color: gray; margin-left: 5px;"></label><span class="OgPrice"></span>
+                                        <span class="dis"></span>
+                                    </span>
+                                </div>
+                            </a>
+                            <a class="item" data-images='["/Product Images/Personal Care Items/Instagram.jpg","/Product Images/Personal Care Items/Instagram (1).jpg"]'>
+                                <div>
+                                    <img src="/Product Images/Personal Care Items/Instagram.jpg" alt="item" class="itemImage">
+                                    <span class="itmName">Mixed Herbs Shampoo 400 Ml</span>
+                                    <span class="rate">
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                    </span>
+                                    <span class="stock">1k+ in stock</span>
+                                    <span class="pricedis">
+                                        <span class="price">Rs.405</span>
+                                        <label style="color: gray; margin-left: 5px;">-/</label><span class="OgPrice">Rs.450</span>
+                                        <span class="dis">-10%</span>
+                                    </span>
+                                </div>
+                            </a>
+                            <a class="item" data-images='["/Product Images/Personal Care Items/Bamboo Stainless Steel Safety Razor - Straight Handle.jpg","/Product Images/Personal Care Items/Plastic-Free Bamboo Razor l Zero Waste Items l Jungle Culture.jpg","/Product Images/Personal Care Items/Eco-Bamboo ME!.jpg"]'>
+                                <div>
+                                    <img src="/Product Images/Personal Care Items/Eco-Bamboo ME!.jpg" alt="item" class="itemImage">
+                                    <span class="itmName">Wooden Razor</span>
+                                    <span class="rate">
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                    </span>
+                                    <span class="stock">500+ in stock</span>
+                                    <span class="pricedis">
+                                        <span class="price">Rs.80</span>
+                                        <label style="color: gray; margin-left: 5px;"></label><span class="OgPrice"></span>
+                                        <span class="dis"></span>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="personal"><!--This container doesnot display the set of items-->
+                            <a class="item" data-images='["/Product Images/Personal Care Items/il_1588xN.3558506232_fynn.jpeg","/Product Images/Personal Care Items/Bamboo Cotton Buds 200-Pack.jpg"]'>
+                                <div>
+                                    <img src="/Product Images/Personal Care Items/Bamboo Cotton Buds 200-Pack.jpg" alt="item" class="itemImage">
+                                    <span class="itmName">Cotton Ear Buds</span>
+                                    <span class="rate">
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                    </span>
+                                    <span class="stock">5k+ in stock</span>
+                                    <span class="pricedis">
+                                        <span class="price">Rs.150</span>
+                                        <label style="color: gray; margin-left: 5px;"></label><span class="OgPrice"></span>
+                                        <span class="dis"></span>
+                                    </span>
+                                </div>
+                            </a>
+                            <a class="item" data-images='["/Product Images/Personal Care Items/Unlock Radiant Skin with Nature's Finest Care Essentials.jpg"]'>
+                                <div>
+                                    <img src="/Product Images/Personal Care Items/Unlock Radiant Skin with Nature's Finest Care Essentials.jpg" alt="item" class="itemImage">
+                                    <span class="itmName">Plant-based Sunscreen</span>
+                                    <span class="rate">
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                        <span class="star" style="color: gold;">★</span>
+                                    </span>
+                                    <span class="stock">139 in stock</span>
+                                    <span class="pricedis">
+                                        <span class="price">Rs.500</span>
+                                        <label style="color: gray; margin-left: 5px;"></label><span class="OgPrice"></span>
+                                        <span class="dis"></span>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <button class="personal-arrow-right">></button><!--Right arrow button to navigate between sets of items-->
+                </div>
+                <h2 id="lifes">Lifestyle Products</h2><!--Code for Lifestyle products-->
+                <div class="lifestyleitm">
+                    <button class="lifestyle-arrow-left"><</button><!--Left arrow button-->
+                    <div class="lifestyle-container">
+                        <div class="lifestyle active">
+                    <a class="item" data-images='["/Product Images/Lifestyle items/15 Essential Travel Items for 2025 That Will Transform Your Trip!.jpg","/Product Images/Lifestyle items/Lumity_ Unlimited Power, Anytime, Anywhere.jpg"]'>
+                    <div>
+                        <img src="/Product Images/Lifestyle items/Lumity_ Unlimited Power, Anytime, Anywhere.jpg" alt="item" class="itemImage">
+                        <span class="itmName">Solar-Powered Charger</span>
+                        <span class="rate">
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gray;">★</span>
+                        </span>
+                        <span class="stock">428 in stock</span>
+                        <span class="pricedis">
+                            <span class="price">Rs.500</span>
+                            <label style="color: gray; margin-left: 5px;"></label><span class="OgPrice"></span>
+                            <span class="dis"></span>
+                        </span>
+                    </div>
+                </a>
+                <a class="item" data-images='["/Product Images/Lifestyle items/custom mug cricut custom mug cartoon mug custom bts mug design text custom tumbler cups aunt baby___.jpg","/Product Images/Lifestyle items/Portable Vacuum Flask Coffee Cup - New Bamboo Thermos Stainless Steel Water Bottle Tumbler, 350_450ml Capacity - 350ml-450ml _ H-350ml.jpg"]'>
+                    <div>
+                        <img src="/Product Images/Lifestyle items/Portable Vacuum Flask Coffee Cup - New Bamboo Thermos Stainless Steel Water Bottle Tumbler, 350_450ml Capacity - 350ml-450ml _ H-350ml.jpg" alt="item" class="itemImage">
+                        <span class="itmName">Reusable Water Bottle (Bamboo)</span>
+                        <span class="rate">
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gray;">★</span>
+                        </span>
+                        <span class="stock">500+ in stock</span>
+                        <span class="pricedis">
+                            <span class="price">Rs.1889</span>
+                            <label style="color: gray; margin-left: 5px;">-/</label><span class="OgPrice">Rs.2460</span>
+                            <span class="dis">-23%</span>
+                        </span>
+                    </div>
+                </a>
+                <a class="item" data-images='["/Product Images/Lifestyle items/download (2).jpg","/Product Images/Lifestyle items/download (3).jpg","/Product Images/Lifestyle items/Caderno Kraft para Anotações A5 _ Shopee Brasil.jpg"]'>
+                    <div>
+                        <img src="/Product Images/Lifestyle items/Caderno Kraft para Anotações A5 _ Shopee Brasil.jpg" alt="item" class="itemImage">
+                        <span class="itmName">A5 Eco-friendly notebook set of 5</span>
+                        <span class="rate">
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gray;">★</span>
+                        </span>
+                        <span class="stock">1k+ in stock</span>
+                        <span class="pricedis">
+                            <span class="price">Rs.650</span>
+                            <label style="color: gray; margin-left: 5px;">-/</label><span class="OgPrice">Rs.800</span>
+                            <span class="dis">-19%</span>
+                        </span>
+                    </div>
+                </a>
+                <a class="item" data-images='["/Product Images/Lifestyle items/I Walk By Faith Canvas Tote Bag, Bible Verse Bag, Christian Accessories.jpg","/Product Images/Lifestyle items/Organic Cotton Canvas Tote Bag_ Who You Are Matters.jpg"]'>
+                    <div>
+                        <img src="/Product Images/Lifestyle items/Organic Cotton Canvas Tote Bag_ Who You Are Matters.jpg" alt="item" class="itemImage">
+                        <span class="itmName">Organic Cotton Tote Bag</span>
+                        <span class="rate">
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gray;">★</span>
+                        </span>
+                        <span class="stock">3k+ in stock</span>
+                        <span class="pricedis">
+                            <span class="price">Rs.900</span>
+                            <label style="color: gray; margin-left: 5px;"></label><span class="OgPrice"></span>
+                            <span class="dis"></span>
+                        </span>
+                    </div>
+                </a>
+                <a class="item" data-images='["/Product Images/Lifestyle items/Paper Saver Refillable Pens - 1 Pack _ With 10-Pack Refills.jpg","/Product Images/Lifestyle items/Paper Saver Pen Refills - 5 Pack.jpg"]'>
+                    <div>
+                        <img src="/Product Images/Lifestyle items/Paper Saver Pen Refills - 5 Pack.jpg" alt="item" class="itemImage">
+                        <span class="itmName">Paper Saver Refillable Pen 5/Pcs</span>
+                        <span class="rate">
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gray;">★</span>
+                        </span>
+                        <span class="stock">1.5k+ in stock</span>
+                        <span class="pricedis">
+                            <span class="price">Rs.20</span>
+                            <label style="color: gray; margin-left: 5px;"></label><span class="OgPrice"></span>
+                            <span class="dis"></span>
+                        </span>
+                    </div>
+                </a>
+                        </div>
+                    </div>
+                    <button class="lifestyle-arrow-right">></button><!--Right arrow button-->
+                </div>
+                <h2 id="kitch">Kitchen Items</h2><!--Code for Kitchen items-->
+                <div class="kitchenitm">
+                    <button class="kitchen-arrow-left"><</button><!--Left arrow button-->
+                    <div class="kitchen-container">
+                        <div class="kitchen active">
+                    <a class="item" data-images='["/Product Images/Kitchen Items/Elephant Box Stainless Steel Two-in-One Lunchbox.jpg","/Product Images/Kitchen Items/Wearth joins forces with Veo.jpg"]'>
+                    <div>
+                        <img src="/Product Images/Kitchen Items/Wearth joins forces with Veo.jpg" alt="item" class="itemImage">
+                        <span class="itmName">Stainless steel lunch box</span>
+                        <span class="rate">
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gray;">★</span>
+                            <span class="star" style="color: gray;">★</span>
+                        </span>
+                        <span class="stock">1.5k+ in stock</span>
+                        <span class="pricedis">
+                            <span class="price">Rs.700</span>
+                            <label style="color: gray; margin-left: 5px;">-/</label><span class="OgPrice">Rs.1000</span>
+                            <span class="dis">-30%</span>
+                        </span>
+                    </div>
+                </a>
+                <a class="item" data-images='["/Product Images/Kitchen Items/634e78c5bca75c05b82a533d-2-reusable-permanent-pour-over-coffee.jpg","/Product Images/Kitchen Items/Paperless Reusable Pour Over Coffee Filter Durable Fine Mesh Stainless Steel Cone Strainer V Shaped.jpg"]'>
+                    <div>
+                        <img src="/Product Images/Kitchen Items/Paperless Reusable Pour Over Coffee Filter Durable Fine Mesh Stainless Steel Cone Strainer V Shaped.jpg" alt="item" class="itemImage">
+                        <span class="itmName">Reusable coffee filters of set 50</span>
+                        <span class="rate">
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gray;">★</span>
+                            <span class="star" style="color: gray;">★</span>
+                        </span>
+                        <span class="stock">138 in stock</span>
+                        <span class="pricedis">
+                            <span class="price">Rs.333</span>
+                            <label style="color: gray; margin-left: 5px;">-/</label><span class="OgPrice">Rs.890</span>
+                            <span class="dis">-62%</span>
+                        </span>
+                    </div>
+                </a>
+                <a class="item" data-images='["/Product Images/Kitchen Items/Amazing Amazon Finds You Probably Didnt Know You Needed - Society19.jpg","/Product Images/Kitchen Items/White zip loc container.jpg","/Product Images/Kitchen Items/Zip Lock Food Storage Freezer Bags Resealable Reusable Plastic Bags Small Large.jpg"]'>
+                    <div>
+                        <img src="/Product Images/Kitchen Items/Zip Lock Food Storage Freezer Bags Resealable Reusable Plastic Bags Small Large.jpg" alt="item" class="itemImage">
+                        <span class="itmName">Silicone food bags 6Pcs/Set</span>
+                        <span class="rate">
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gray;">★</span>
+                            <span class="star" style="color: gray;">★</span>
+                        </span>
+                        <span class="stock">1k+ in stock</span>
+                        <span class="pricedis">
+                            <span class="price">Rs.142</span>
+                            <label style="color: gray; margin-left: 5px;">-/</label><span class="OgPrice">Rs.160</span>
+                            <span class="dis">-11%</span>
+                        </span>
+                    </div>
+                </a>
+                <a class="item" data-images='["/Product Images/Kitchen Items/Bulk Mini Bamboo Spoons_ 3_5.jpg","/Product Images/Kitchen Items/RDEXP Small Wooden Salt Spoons for Spice Jars Seasoning Honey Coffee Set of 50.jpg"]'>
+                    <div>
+                        <img src="/Product Images/Kitchen Items/RDEXP Small Wooden Salt Spoons for Spice Jars Seasoning Honey Coffee Set of 50.jpg" alt="item" class="itemImage">
+                        <span class="itmName">Bamboo mini spoon of set 3</span>
+                        <span class="rate">
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gray;">★</span>
+                            <span class="star" style="color: gray;">★</span>
+                        </span>
+                        <span class="stock">500+ in stock</span>
+                        <span class="pricedis">
+                            <span class="price">Rs.549</span>
+                            <label style="color: gray; margin-left: 5px;">-/</label><span class="OgPrice">Rs.790</span>
+                            <span class="dis">-39%</span>
+                        </span>
+                    </div>
+                </a>
+                <a class="item" data-images='["/Product Images/Kitchen Items/Txkrhwa 5pcs Bamboo Dish Brushes Set, Kitchen Clean Dish Scrubber, Wooden Natural Bristle Dish Brushes, with 4 Replacement Heads for Washing and .jpg","/Product Images/Kitchen Items/EI__0284-Edit-2-768x768-1.jpg","/Product Images/Kitchen Items/25 Must-Have Eco-Friendly Products for Your Home.jpg"]'>
+                    <div>
+                        <img src="/Product Images/Kitchen Items/25 Must-Have Eco-Friendly Products for Your Home.jpg" alt="item" class="itemImage">
+                        <span class="itmName">Compostable Dish Brush 9pcs</span>
+                        <span class="rate">
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gray;">★</span>
+                            <span class="star" style="color: gray;">★</span>
+                        </span>
+                        <span class="stock">1k+ in stock</span>
+                        <span class="pricedis">
+                            <span class="price">Rs.850</span>
+                            <label style="color: gray; margin-left: 5px;">-/</label><span class="OgPrice">Rs.1885</span>
+                            <span class="dis">-55%</span>
+                        </span>
+                    </div>
+                </a>
+                        </div>
+                    </div>
+                    <button class="kitchen-arrow-right"></button><!--Right arrow button-->
+                </div>
+                <h2 id="hom">Home & Cleaning Products</h2><!--Code for Home and cleaning products-->
+                <div class="homepro">
+                    <button class="homep-arrow-left"></button><!--Left arrow button-->
+                    <div class="homep-container">
+                        <div class="homep active">
+                    <a class="item" data-images='["/Product Images/Home & Cleaning items/81W4Elt6dXL._AC_UF894,1000_QL80_.jpg","/Product Images/Home & Cleaning items/2 Reusable Dry Sweeping Cloths Microfiber Wet Mop Pads Fits Sweepers Mop Replace.jpg"]'>
+                    <div>
+                        <img src="/Product Images/Home & Cleaning items/2 Reusable Dry Sweeping Cloths Microfiber Wet Mop Pads Fits Sweepers Mop Replace.jpg" alt="item" class="itemImage">
+                        <span class="itmName">Reusable Microfiber Mop</span>
+                        <span class="rate">
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gray;">★</span>
+                        </span>
+                        <span class="stock">500+ in stock</span>
+                        <span class="pricedis">
+                            <span class="price">Rs.280</span>
+                            <label style="color: gray; margin-left: 5px;">-/</label><span class="OgPrice">Rs.500</span>
+                            <span class="dis">-44%</span>
+                        </span>
+                    </div>
+                </a>
+                <a class="item" data-images='["/Product Images/Home & Cleaning items/5 Rolls Strong Trash Bags Colorful Clear Garbage Bags, Bathroom Trash Can Bin Liners, Small Plastic Bags for home office kitchen, Multicolor.jpg","/Product Images/Home & Cleaning items/Ramddy 5 Gallon Trash Bags, Black Waste Bin Liners for Home, Office (150 Counts_6 Rolls).jpg","/Product Images/Home & Cleaning items/iDemaya Small Trash Bags, Biodegradable 2_6 Gallon Extra Thick Garbage Bags, Recycling & Degradable Rubbish Bags Wastebasket Liners for Kitchen B.jpg"]'>
+                    <div>
+                        <img src="/Product Images/Home & Cleaning items/iDemaya Small Trash Bags, Biodegradable 2_6 Gallon Extra Thick Garbage Bags, Recycling & Degradable Rubbish Bags Wastebasket Liners for Kitchen B.jpg" alt="item" class="itemImage">
+                        <span class="itmName">Biodegradable Trash Bags</span>
+                        <span class="rate">
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gray;">★</span>
+                        </span>
+                        <span class="stock">2.5k+ in stock</span>
+                        <span class="pricedis">
+                            <span class="price">Rs.1646</span>
+                            <label style="color: gray; margin-left: 5px;">-/</label><span class="OgPrice">Rs.3905</span>
+                            <span class="dis">-58%</span>
+                        </span>
+                    </div>
+                </a>
+                <a class="item" data-images='["/Product Images/Home & Cleaning items/ecea66c0.jpeg","/Product Images/Home & Cleaning items/Castile Soap • 16 fl oz.jpg"]'>
+                    <div>
+                        <img src="/Product Images/Home & Cleaning items/Castile Soap • 16 fl oz.jpg" alt="item" class="itemImage">
+                        <span class="itmName">Castile Soap-Natural All-Purpose Cleaner</span>
+                        <span class="rate">
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gray;">★</span>
+                        </span>
+                        <span class="stock">1k+ in stock</span>
+                        <span class="pricedis">
+                            <span class="price">Rs.190</span>
+                            <label style="color: gray; margin-left: 5px;"></label><span class="OgPrice"></span>
+                            <span class="dis"></span>
+                        </span>
+                    </div>
+                </a>
+                <a class="item" data-images='["/Product Images/Home & Cleaning items/Blueland-Spring-Bloom-Laundry-Detergent-Tablets-best-invention.jpeg","/Product Images/Home & Cleaning items/71EG3fDmoQL.jpeg"]'>
+                    <div>
+                        <img src="/Product Images/Home & Cleaning items/71EG3fDmoQL.jpeg" alt="item" class="itemImage">
+                        <span class="itmName">Blueland Laundry Essentials Kit</span>
+                        <span class="rate">
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gray;">★</span>
+                        </span>
+                        <span class="stock">388 in stock</span>
+                        <span class="pricedis">
+                            <span class="price">Rs.2400</span>
+                            <label style="color: gray; margin-left: 5px;">-/</label><span class="OgPrice">Rs.4000</span>
+                            <span class="dis">-40%</span>
+                        </span>
+                    </div>
+                </a>
+                <a class="item" data-images='["/Product Images/Home & Cleaning items/meliora-unscented-foaming-hand-soap-tablets-32699899707503.jpg","/Product Images/Home & Cleaning items/meliora-foaming-hand-soap-tablets-32699899641967.jpg","/Product Images/Home & Cleaning items/meliora-foaming-hand-soap-tablets-32699899609199.jpg"]'>
+                    <div>
+                        <img src="/Product Images/Home & Cleaning items/meliora-foaming-hand-soap-tablets-32699899609199.jpg" alt="item" class="itemImage">
+                        <span class="itmName">Foaming Hand Soap Tablets</span>
+                        <span class="rate">
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gray;">★</span>
+                        </span>
+                        <span class="stock">189 in stock</span>
+                        <span class="pricedis">
+                            <span class="price">Rs.810</span>
+                            <label style="color: gray; margin-left: 5px;">-/</label><span class="OgPrice">Rs.1000</span>
+                            <span class="dis">-19%</span>
+                        </span>
+                    </div>
+                </a>
+                        </div>
+                    </div>
+                    <button class="homep-arrow-right"></button><!--Right arrow button-->
+                </div>
+            </div>
+        </div>
+        <div class="foot"> <!--A container to create a footer-->
+            <div class="secondfooter"> <!--Container to create a second footer-->
+                <div class="bottomLink"> <!--Container for both logo and social media-->
+                    <img src="/Icons/EcoMart.png" alt="EcoMart Logo" style="width: 250px; height: 88px; position: relative; float: right; margin-top: 25px;"> <!--Logo of the store-->
+                    <div class="social"> <!--Container to store Social Media Links-->
+                        <a href="https://youtu.be/dQw4w9WgXcQ?si=kJT0Y42J-oUOEi-n">
+                            <img src="/Icons/youtube-brands-solid-full.png" alt="youtube" class="yt"><!--Social Media logo-->
+                        </a>
+                        <a href="https://www.instagram.com/reel/CfIEj18pjAz/?igsh=MXVndTluemhuaWVreQ==">
+                            <img src="/Icons/instagram-brands-solid-full.png" alt="instagram" class="insta">
+                        </a>
+                        <a href="https://www.facebook.com/share/p/1G6SPSyAAy/">
+                            <img src="/Icons/facebook-brands-solid-full.png" alt="facebook" class="fb">
+                        </a>
+                        <a href="https://x.com/allreactionvidz/status/1249541936991604737?s=20">
+                            <img src="/Icons/square-x-twitter-brands-solid-full.png" alt="twitter" class="tweet">
+                        </a>
+                        <a href="https://pin.it/4QQPtgu0i">
+                            <img src="/Icons/pinterest-brands-solid-full.png" alt="pinterest" class="pin">
+                        </a>
+                    </div>
+                </div>
+                <div class="customerservice" style="margin-left: 200px; margin-right: auto; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"> <!--Container for customer service pages-->
+                    <div style="font-weight: bold; color: black; margin-left: 25px; margin-top: 0px;">
+                        <h3>Customer Service</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="/Web Pages/Home-EcoMart.html"  style="color: black; font-size: 18px;">Home</a> <!-- Navigation link to Home page -->
+                        </li>
+                        <li>
+                            <a href="Products-EcoMart.html" style="color: black; font-size: 18px;">Products</a> <!-- Navigation link to Product page -->
+                        </li>
+                        <li>
+                            <a href="Wishlist-EcoMart.html" style="color: black; font-size: 18px;">WishList</a> <!-- Navigation link to WishList page -->
+                        </li>
+                        <li>
+                            <a href="Cart-EcoMart.html" style="color: black; font-size: 18px;">Cart</a> <!-- Navigation link to Cart page -->
+                        </li>
+                    </ul>
+                </div>
+                <div class="company" style="margin-right: 450px; margin-left: auto; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"> <!--Container for Company details pages-->
+                    <div style="font-weight: bold; color: black; margin-left: 25px; margin-top: 0px;">
+                        <h3>Get to know us</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="Blog-EcoMart.html" style="color: black; font-size: 18px;">Blog</a> <!-- Navigation link to Blog page -->
+                        </li>
+                        <li>
+                            <a href="About-EcoMart.html" style="color: black; font-size: 18px;">About Us</a> <!-- Navigation link to About Us page -->
+                        </li>
+                        <li>
+                            <a href="Research-EcoMart.html" style="color: black; font-size: 18px;">Research</a> <!-- Navigation link to Research page -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright"> <!--Container for Footer-->
+                Copyright © 2026 Ecomart Store. All Rights Reserved.
+            </div>
+        </div>
+        <script src="EcoMart.js"></script>
+        <script>
+            let items = document.querySelectorAll(".item");
+
+            items.forEach((itm) => {//This function creates an alert when an item is clicked
+                itm.onclick = function(){
+                    window.alert("This product will never arrive at your home.");
+                }
+            });
+
+            // Personal Items Slider functionality with Auto-slide
+            const personalLeftArrow = document.querySelector('.personal-arrow-left');
+            const personalRightArrow = document.querySelector('.personal-arrow-right');
+            const personalSets = document.querySelectorAll('.personal');
+            let currentPersonalItem = 0;
+            let autoSlideTimer = null;
+            
+            if (personalLeftArrow && personalRightArrow && personalSets.length > 0) {
+                const showPersonalSlide = (index) => {
+                    personalSets.forEach((item) => item.classList.remove('active'));
+                    personalSets[index].classList.add('active');
+                };
+                
+                // Auto-slide function
+                const autoSlide = () => {
+                    currentPersonalItem = (currentPersonalItem + 1) % personalSets.length;
+                    showPersonalSlide(currentPersonalItem);
+                };
+                
+                // Start auto-slide (every 5 seconds)
+                const startAutoSlide = () => {
+                    autoSlideTimer = setInterval(autoSlide, 5000);
+                };
+                
+                // Stop auto-slide
+                const stopAutoSlide = () => {
+                    if (autoSlideTimer) {
+                        clearInterval(autoSlideTimer);
+                    }
+                };
+                
+                // Left arrow click
+                personalLeftArrow.addEventListener('click', () => {
+                    stopAutoSlide();
+                    currentPersonalItem = (currentPersonalItem - 1 + personalSets.length) % personalSets.length;
+                    showPersonalSlide(currentPersonalItem);
+                    startAutoSlide();
+                });
+                
+                // Right arrow click
+                personalRightArrow.addEventListener('click', () => {
+                    stopAutoSlide();
+                    currentPersonalItem = (currentPersonalItem + 1) % personalSets.length;
+                    showPersonalSlide(currentPersonalItem);
+                    startAutoSlide();
+                });
+                
+                // Pause on hover
+                const personalContainer = document.querySelector('.personalcare');
+                personalContainer.addEventListener('mouseenter', stopAutoSlide);
+                personalContainer.addEventListener('mouseleave', startAutoSlide);
+                
+                // Start auto-slide on page load
+                startAutoSlide();
+            }
+
+            // ============ LIFESTYLE ITEMS AUTO-SLIDER ============
+            const lifestyleLeftArrow = document.querySelector('.lifestyle-arrow-left');
+            const lifestyleRightArrow = document.querySelector('.lifestyle-arrow-right');
+            const lifestyleSets = document.querySelectorAll('.lifestyle');
+            let currentLifestyleItem = 0;
+            let lifestyleAutoSlideTimer = null;
+            
+            if (lifestyleLeftArrow && lifestyleRightArrow && lifestyleSets.length > 0) {
+                const showLifestyleSlide = (index) => {
+                    lifestyleSets.forEach((item) => item.classList.remove('active'));
+                    lifestyleSets[index].classList.add('active');
+                };
+                
+                // Auto-slide function
+                const lifestyleAutoSlide = () => {
+                    currentLifestyleItem = (currentLifestyleItem + 1) % lifestyleSets.length;
+                    showLifestyleSlide(currentLifestyleItem);
+                };
+                
+                // Start auto-slide (every 6 seconds)
+                const startLifestyleAutoSlide = () => {
+                    lifestyleAutoSlideTimer = setInterval(lifestyleAutoSlide, 1000);
+                };
+                
+                // Stop auto-slide
+                const stopLifestyleAutoSlide = () => {
+                    if (lifestyleAutoSlideTimer) {
+                        clearInterval(lifestyleAutoSlideTimer);
+                    }
+                };
+                
+                // Left arrow click
+                lifestyleLeftArrow.addEventListener('click', () => {
+                    stopLifestyleAutoSlide();
+                    currentLifestyleItem = (currentLifestyleItem - 1 + lifestyleSets.length) % lifestyleSets.length;
+                    showLifestyleSlide(currentLifestyleItem);
+                    startLifestyleAutoSlide();
+                });
+                
+                // Right arrow click
+                lifestyleRightArrow.addEventListener('click', () => {
+                    stopLifestyleAutoSlide();
+                    currentLifestyleItem = (currentLifestyleItem + 1) % lifestyleSets.length;
+                    showLifestyleSlide(currentLifestyleItem);
+                    startLifestyleAutoSlide();
+                });
+                
+                // Pause on hover
+                const lifestyleContainer = document.querySelector('.lifestyleitm');
+                lifestyleContainer.addEventListener('mouseenter', stopLifestyleAutoSlide);
+                lifestyleContainer.addEventListener('mouseleave', startLifestyleAutoSlide);
+                
+                // Start auto-slide on page load
+                startLifestyleAutoSlide();
+            }
+
+            // ============ KITCHEN ITEMS AUTO-SLIDER ============
+            const kitchenLeftArrow = document.querySelector('.kitchen-arrow-left');
+            const kitchenRightArrow = document.querySelector('.kitchen-arrow-right');
+            const kitchenSets = document.querySelectorAll('.kitchen');
+            let currentKitchenItem = 0;
+            let kitchenAutoSlideTimer = null;
+            
+            if (kitchenLeftArrow && kitchenRightArrow && kitchenSets.length > 0) {
+                const showKitchenSlide = (index) => {
+                    kitchenSets.forEach((item) => item.classList.remove('active'));
+                    kitchenSets[index].classList.add('active');
+                };
+                
+                // Auto-slide function
+                const kitchenAutoSlide = () => {
+                    currentKitchenItem = (currentKitchenItem + 1) % kitchenSets.length;
+                    showKitchenSlide(currentKitchenItem);
+                };
+                
+                // Start auto-slide (every 6 seconds)
+                const startKitchenAutoSlide = () => {
+                    kitchenAutoSlideTimer = setInterval(kitchenAutoSlide, 1000);
+                };
+                
+                // Stop auto-slide
+                const stopKitchenAutoSlide = () => {
+                    if (kitchenAutoSlideTimer) {
+                        clearInterval(kitchenAutoSlideTimer);
+                    }
+                };
+                
+                // Left arrow click
+                kitchenLeftArrow.addEventListener('click', () => {
+                    stopKitchenAutoSlide();
+                    currentKitchenItem = (currentKitchenItem - 1 + kitchenSets.length) % kitchenSets.length;
+                    showKitchenSlide(currentKitchenItem);
+                    startKitchenAutoSlide();
+                });
+                
+                // Right arrow click
+                kitchenRightArrow.addEventListener('click', () => {
+                    stopKitchenAutoSlide();
+                    currentKitchenItem = (currentKitchenItem + 1) % kitchenSets.length;
+                    showKitchenSlide(currentKitchenItem);
+                    startKitchenAutoSlide();
+                });
+                
+                // Pause on hover
+                const kitchenContainer = document.querySelector('.kitchenitm');
+                kitchenContainer.addEventListener('mouseenter', stopKitchenAutoSlide);
+                kitchenContainer.addEventListener('mouseleave', startKitchenAutoSlide);
+                
+                // Start auto-slide on page load
+                startKitchenAutoSlide();
+            }
+
+            // ============ HOME & CLEANING ITEMS AUTO-SLIDER ============
+            const homepLeftArrow = document.querySelector('.homep-arrow-left');
+            const homepRightArrow = document.querySelector('.homep-arrow-right');
+            const homepSets = document.querySelectorAll('.homep');
+            let currentHomepItem = 0;
+            let homepAutoSlideTimer = null;
+            
+            if (homepLeftArrow && homepRightArrow && homepSets.length > 0) {
+                const showHomepSlide = (index) => {
+                    homepSets.forEach((item) => item.classList.remove('active'));
+                    homepSets[index].classList.add('active');
+                };
+                
+                // Auto-slide function
+                const homepAutoSlide = () => {
+                    currentHomepItem = (currentHomepItem + 1) % homepSets.length;
+                    showHomepSlide(currentHomepItem);
+                };
+                
+                // Start auto-slide (every 6 seconds)
+                const startHomepAutoSlide = () => {
+                    homepAutoSlideTimer = setInterval(homepAutoSlide, 1000);
+                };
+                
+                // Stop auto-slide
+                const stopHomepAutoSlide = () => {
+                    if (homepAutoSlideTimer) {
+                        clearInterval(homepAutoSlideTimer);
+                    }
+                };
+                
+                // Left arrow click
+                homepLeftArrow.addEventListener('click', () => {
+                    stopHomepAutoSlide();
+                    currentHomepItem = (currentHomepItem - 1 + homepSets.length) % homepSets.length;
+                    showHomepSlide(currentHomepItem);
+                    startHomepAutoSlide();
+                });
+                
+                // Right arrow click
+                homepRightArrow.addEventListener('click', () => {
+                    stopHomepAutoSlide();
+                    currentHomepItem = (currentHomepItem + 1) % homepSets.length;
+                    showHomepSlide(currentHomepItem);
+                    startHomepAutoSlide();
+                });
+                
+                // Pause on hover
+                const homepContainer = document.querySelector('.homepro');
+                homepContainer.addEventListener('mouseenter', stopHomepAutoSlide);
+                homepContainer.addEventListener('mouseleave', startHomepAutoSlide);
+                
+                // Start auto-slide on page load
+                startHomepAutoSlide();
+            }
+        </script>
+    </body>
+</html>

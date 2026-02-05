@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="Icon" href="/Icons/EcoMart Title(1).png" type="image/png"> <!-- Sets the title picture for the webpage -->
+        <title>Blog - EcoMart</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Adjusts layout for different screen sizes-->
+        <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 -->
+        <meta name="description" content="EcoMart Blog - Insights on Technology & Sustainable Products">
+        <meta name="keywords" content="eco-friendly, sustainable products, plastic-free, technology, blog">
+        <meta name="author" content="Bindu Adhikari">
+        <meta name="robots" content="index, follow">
+        <link rel="stylesheet" href="EcoMart.css"> <!-- Links to external CSS file for styling -->
+        <style> /*Internal CSS*/
+            body{
+                margin: 0px;
+                padding: 0px;
+                background-repeat: no-repeat;
+                background-color: aliceblue;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                overflow-x: hidden;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            a{
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header> 
+            <div class="wel">Welcome to EcoMart</div>
+            <div class="comp"><!--Container to store page hyperlinks-->
+                <a class="blog" href="Blog-EcoMart.html">Blog</a> <!-- Navigation link to Blog page -->
+                <a class="about" href="About-EcoMart.html">About Us</a> <!-- Navigation link to About Us page -->
+                <a class="research" href="Research-EcoMart.html">Research</a> <!-- Navigation link to Research page -->
+            </div>
+            <div class="logreg">
+                <a href="Login-EcoMart.html" class="login">Login</a><!--Button for login pop-up-->
+                <a href="Register-EcoMart.html" class="register">Register</a><!--Button for register pop-up-->
+            </div>
+        </header>
+        <div class="secondheader"> <!--Container for a second header-->
+            <div class="logotopleft">
+            <a href="/Web Pages/Home-EcoMart.html">
+                <img src="/Icons/EcoMart.png" alt="EcoMart Logo" style="width: 125px; height: 44px;"> <!-- Logo image linking to home page -->
+            </a>
+            </div>
+            <div class="cust"><!--Container to store page hyperlinks-->
+                <a class="home" href="/Web Pages/Home-EcoMart.html">Home</a> <!-- Navigation link to Home page -->
+                <a class="products" href="Products-EcoMart.html">Products</a> <!-- Navigation link to Product page -->
+            </div>
+            <div class="searchbar"><!--Container to store search bar elements-->
+                <div class="search">
+                    <input type="text" name="Search" placeholder="Search for products..." class="searchText"> <!--Text bar for product search-->
+                </div>
+                <div class="button">
+                    <button class="searchBtn"></button><!--Search button for search-->
+                </div>
+            </div>
+            <div class="itembox"> <!--Container to store store page icons-->
+                <a class="wishlist" href="Wishlist-EcoMart.html">
+                    <img src="/Icons/heart-solid.png" alt="WishList Icon" height="40px" width="40px">
+                </a> <!-- Navigation link to WishList page -->
+                <a class="cart" href="Cart-EcoMart.html">
+                    <img src="/Icons/cart.png" alt="Cart Icon" height="40px" width="40px">
+                </a> <!-- Navigation link to Cart page -->
+            </div>
+        </div>
+        <h2 class="title">Blog</h2><!--Main title of the webpage-->
+    <h3 class="subtitle">Insights on Technology & Sustainable Product</h3>
+
+    <div class="container">
+
+        <!-- Card 1 -->
+        <div class="card" onclick="openModal('modal1')">
+            <img src="/Photos/TECHNOLOGY.jpeg" alt="Technology">
+            <div class="card-content">
+                <div class="heading">About Technology</div>
+            </div>
+            <div class="card-footer">
+                <button class="btn">Read More</button>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card" onclick="openModal('modal2')">
+            <img src="/Photos/positive.jpeg" alt="Positive Technology Impact">
+            <div class="card-content">
+                <div class="heading">Positive Impact of Technology</div>
+            </div>
+            <div class="card-footer">
+                <button class="btn">Read More</button>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card" onclick="openModal('modal3')">
+            <img src="/Photos/neg.jpeg" alt="Negative Technology Impact">
+            <div class="card-content">
+                <div class="heading">Negative Impact of Technology</div>
+            </div>
+            <div class="card-footer">
+                <button class="btn">Read More</button>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card" onclick="openModal('modal4')">
+            <img src="/Photos/tec bost.jpeg" alt="Tech Boosts Sales">
+            <div class="card-content">
+                <div class="heading">How Technology Boosts Sustainable Product Sales?</div>
+            </div>
+            <div class="card-footer">
+                <button class="btn">Read More</button>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card" onclick="openModal('modal5')">
+            <img src="/Photos/why sus products.jpeg" alt="Why Sustainable Products">
+            <div class="card-content">
+                <div class="heading">Why Choose Sustainable Products?</div>
+            </div>
+            <div class="card-footer">
+                <button class="btn">Read More</button>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card" onclick="openModal('modal6')">
+            <img src="/Photos/tips and trick.jpeg" alt="Tips and Tricks">
+            <div class="card-content">
+                <div class="heading">Sustainable Living Tips & Tricks</div>
+            </div>
+            <div class="card-footer">
+                <button class="btn">Read More</button>
+            </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="card" onclick="openModal('modal7')">
+            <img src="/Photos/brand.jpeg" alt="Expert Interview">
+            <div class="card-content">
+                <div class="heading">Interviews with Sustainable Brands & Experts</div>
+            </div>
+            <div class="card-footer">
+                <button class="btn">Read More</button>
+            </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="card" onclick="openModal('modal8')">
+            <img src="/Photos/news.jpeg" alt="Environmental News">
+            <div class="card-content">
+                <div class="heading">News & Updates on Environmental Issues</div>
+            </div>
+            <div class="card-footer">
+                <button class="btn">Read More</button>
+            </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="card" onclick="openModal('modal9')">
+            <img src="/Photos/success.jpeg" alt="Community Success">
+            <div class="card-content">
+                <div class="heading">Community Stories & Successes</div>
+            </div>
+            <div class="card-footer">
+                <button class="btn">Read More</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal 1 -->
+    <div id="modal1" class="modal">
+        <div class="modal-content1">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2 class="modal-header1">About Technology</h2>
+            <img src="/Photos/TECHNOLOGY.jpeg" alt="Technology" class="modal-image">
+            <p class="modal-text">It is a fact that in this modern era, almost all occupational areas are changing swiftly. It cannot be refuted that technology is the cause of the biggest revolution of this modern period. In this modern era, technology has become an integral part of all areas.</p>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal">
+        <div class="modal-content1">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2 class="modal-header1">Positive Impact of Technology</h2>
+            <img src="/Photos/positive.jpeg" alt="Positive Technology Impact" class="modal-image">
+            <p class="modal-text">Technology is an empowering force that saves time, enhances productivity, and allows global connectivity. The positive effects of technology can be noted in education, healthcare, business, and communication, leading to an easier and more sophisticated life.</p>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal">
+        <div class="modal-content1">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2 class="modal-header1">Negative Impact of Technology</h2>
+            <img src="/Photos/neg.jpeg" alt="Negative Technology Impact" class="modal-image">
+            <p class="modal-text">Although technology offers numerous benefits such as convenience and innovation, technology is also one of the drivers of e-waste generation, resource depletion, as well as excessive usage of energy. At EcoMart, we would like to mitigate such effects of technology by using technology wisely for purposes of encouraging environmentally sustainable lifestyles.</p>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div id="modal4" class="modal">
+        <div class="modal-content1">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h2 class="modal-header1">How Technology Boosts Sustainable Product Sales?</h2>
+            <img src="/Photos/tec bost.jpeg" alt="Tech Boosts Sales" class="modal-image">
+            <p class="modal-text">Digital platforms and applications make it easier for sustainable brands to connect with many people. Customers can access information about environmentally friendly alternatives easily; therefore, they make informed decisions that favor responsible businesses.</p>
+        </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div id="modal5" class="modal">
+        <div class="modal-content1">
+            <span class="close" onclick="closeModal('modal5')">&times;</span>
+            <h2 class="modal-header1">Why Choose Sustainable Products?</h2>
+            <img src="/Photos/why sus products.jpeg" alt="Why Sustainable Products" class="modal-image">
+            <p class="modal-text">Green products are environmentally sustainable, promote health, as well as maintain ethical standards. Making environmentally sustainable products is a simple way to a healthy and green planet.</p>
+        </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div id="modal6" class="modal">
+        <div class="modal-content1">
+            <span class="close" onclick="closeModal('modal6')">&times;</span>
+            <h2 class="modal-header1">Sustainable Living Tips & Tricks</h2>
+            <img src="/Photos/tips and trick.jpeg" alt="Tips and Tricks" class="modal-image">
+            <p class="modal-text">The simple day-to-day actions of using reusable items, reducing energy, choosing eco-friendly products, and minimizing waste will create genuine change that resonates in support of the planet and a sustainable quality of life for all.</p>
+        </div>
+    </div>
+
+    <!-- Modal 7 -->
+    <div id="modal7" class="modal">
+        <div class="modal-content1">
+            <span class="close" onclick="closeModal('modal7')">&times;</span>
+            <h2 class="modal-header1">Interviews with Sustainable Brands & Experts</h2>
+            <img src="/Photos/brand.jpeg" alt="Expert Interview" class="modal-image">
+            <p class="modal-text">Learn from the sustainable brands and eco-experts as they impart their knowledge and experiences on the topics of sustainability and the lessons they have taken away, inspiring others to make eco-conscious choices.</p>
+        </div>
+    </div>
+
+    <!-- Modal 8 -->
+    <div id="modal8" class="modal">
+        <div class="modal-content1">
+            <span class="close" onclick="closeModal('modal8')">&times;</span>
+            <h2 class="modal-header1">News & Updates on Environmental Issues</h2>
+            <img src="/Photos/news.jpeg" alt="Environmental News" class="modal-image">
+            <p class="modal-text">Stay updated with the current trends and innovations in the environment globally. This equips a person to make informed and conscious choices towards a positive and sustainable environment.</p>
+        </div>
+    </div>
+
+    <!-- Modal 9 -->
+    <div id="modal9" class="modal">
+        <div class="modal-content1">
+            <span class="close" onclick="closeModal('modal9')">&times;</span>
+            <h2 class="modal-header1">Community Stories & Successes</h2>
+            <img src="/Photos/success.jpeg" alt="Community Success" class="modal-image">
+            <p class="modal-text">Find the motivational stories and learn about the ways in which many communities are making a positive difference. By working together and making greener and more earth-friendly choices, the community can send a signal with its actions to help ensure a greener, healthier future.</p>
+        </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <div class="conclusion">
+        <h3>Conclusion</h3>
+        <p>Eco-friendly living is not just a trend, but a responsibility. By making small changes in our daily habits, supporting sustainable products, and embracing technology to reduce our impact, we can create a healthier planet. Every mindful choice counts, and together we can build a greener future for generations to come.</p>
+    </div>
+
+        <div class="foot"> <!--A container to create a footer-->
+            <div class="secondfooter"> <!--Container to create a second footer-->
+                <div class="bottomLink"> <!--Container for both logo and social media-->
+                    <img src="/Icons/EcoMart.png" alt="EcoMart Logo" style="width: 250px; height: 88px; position: relative; float: right; margin-top: 25px;"> <!--Logo of the store-->
+                    <div class="social"> <!--Container to store Social Media Links-->
+                        <a href="https://youtu.be/dQw4w9WgXcQ?si=kJT0Y42J-oUOEi-n">
+                            <img src="/Icons/youtube-brands-solid-full.png" alt="youtube" class="yt">
+                        </a>
+                        <a href="https://www.instagram.com/reel/CfIEj18pjAz/?igsh=MXVndTluemhuaWVreQ==">
+                            <img src="/Icons/instagram-brands-solid-full.png" alt="instagram" class="insta">
+                        </a>
+                        <a href="https://www.facebook.com/share/p/1G6SPSyAAy/">
+                            <img src="/Icons/facebook-brands-solid-full.png" alt="facebook" class="fb">
+                        </a>
+                        <a href="https://x.com/allreactionvidz/status/1249541936991604737?s=20">
+                            <img src="/Icons/square-x-twitter-brands-solid-full.png" alt="twitter" class="tweet">
+                        </a>
+                        <a href="https://pin.it/4QQPtgu0i">
+                            <img src="/Icons/pinterest-brands-solid-full.png" alt="pinterest" class="pin">
+                        </a>
+                    </div>
+                </div>
+                <div class="customerservice" style="margin-left: 200px; margin-right: auto; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"> <!--Container for customer service pages-->
+                    <div style="font-weight: bold; color: black; margin-left: 25px; margin-top: 0px;">
+                        <h3>Customer Service</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="/Web Pages/Home-EcoMart.html"  style="color: black; font-size: 18px;">Home</a> <!-- Navigation link to Home page -->
+                        </li>
+                        <li>
+                            <a href="Products-EcoMart.html" style="color: black; font-size: 18px;">Products</a> <!-- Navigation link to Product page -->
+                        </li>
+                        <li>
+                            <a href="Wishlist-EcoMart.html" style="color: black; font-size: 18px;">WishList</a> <!-- Navigation link to WishList page -->
+                        </li>
+                        <li>
+                            <a href="Cart-EcoMart.html" style="color: black; font-size: 18px;">Cart</a> <!-- Navigation link to Cart page -->
+                        </li>
+                    </ui>
+                </div>
+                <div class="company" style="margin-right: 450px; margin-left: auto; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"> <!--Container for Company details pages-->
+                    <div style="font-weight: bold; color: black; margin-left: 25px; margin-top: 0px;">
+                        <h3>Get to know us</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="Blog-EcoMart.html" style="color: black; font-size: 18px;">Blog</a> <!-- Navigation link to Blog page -->
+                        </li>
+                        <li>
+                            <a href="About-EcoMart.html" style="color: black; font-size: 18px;">About Us</a> <!-- Navigation link to About Us page -->
+                        </li>
+                        <li>
+                            <a href="Research-EcoMart.html" style="color: black; font-size: 18px;">Research</a> <!-- Navigation link to Research page -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright"> <!--Container for Footer-->
+                Copyright © 2026 Ecomart Store. All Rights Reserved.
+            </div>
+        </div>
+        <script>
+        // Open modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+            document.body.style.overflow = "hidden"; // Prevent scrolling
+        }
+
+        // Close modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+            document.body.style.overflow = "auto"; // Re-enable scrolling
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+    </script>
+    </body>
+</html>

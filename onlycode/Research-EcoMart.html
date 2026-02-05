@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="Icon" href="/Icons/EcoMart Title(1).png" type="image/x-icon">
+        <title>Research - EcoMart</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <meta name="description" content="EcoMart Research Page - Comprehensive analysis of sustainable e-commerce websites and detailed comparisons of all EcoMart pages.">
+        <meta name="keywords" content="eco-friendly, sustainable products, plastic-free, research, website comparison">
+        <meta name="author" content="Arjun prasad sharma">
+        <meta name="robots" content="index, follow">
+
+        <link rel="stylesheet" href="EcoMart.css">
+        <style>
+            body{
+                margin: 0px;
+                padding: 0px;
+                background-color: #f5f5f5;
+                background-size: cover;
+                background-attachment: fixed;
+                overflow-x: hidden;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            a{
+                text-decoration: none;
+            }
+            .research-container {
+                max-width: 1500px;
+                margin: 40px auto;
+                padding: 0 20px;
+                width: 100%;
+            }
+            .research-header {
+                text-align: center;
+                margin-bottom: 60px;
+            }
+            .research-header h1 {
+                font-size: 48px;
+                color: #228B22;
+                margin: 20px 0;
+                font-weight: 700;
+            }
+            .research-header p {
+                font-size: 18px;
+                color: #555;
+                max-width: 800px;
+                margin: 0 auto;
+                line-height: 1.6;
+            }
+            .back-button {
+                display: inline-block;
+                padding: 8px 16px;
+                background-color: #e0e0e0;
+                color: #333;
+                border-radius: 5px;
+                margin-bottom: 30px;
+                cursor: pointer;
+                transition: all 0.3s;
+                border: 1px solid #999;
+            }
+            .back-button:hover {
+                background-color: #228B22;
+                color: white;
+            }
+
+            /* Page Comparison Sections */
+            .page-comparison-section {
+                background: white;
+                padding: 40px;
+                border-radius: 15px;
+                margin-bottom: 50px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            }
+
+            .page-comparison-section h2 {
+                color: #228B22;
+                font-size: 32px;
+                margin: 0 0 10px 0;
+                text-align: center;
+            }
+
+            .page-subtitle {
+                text-align: center;
+                color: #666;
+                font-size: 16px;
+                margin-bottom: 40px;
+            }
+
+            /* Visual Comparison */
+            .visual-comparison-box {
+                border: 1px solid #ddd;
+                padding: 30px;
+                border-radius: 10px;
+                margin-bottom: 40px;
+                background: #f9f9f9;
+            }
+
+            .visual-comparison-box h3 {
+                text-align: center;
+                color: #333;
+                font-size: 20px;
+                margin: 0 0 20px 0;
+            }
+
+            .comparison-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+                margin-bottom: 30px;
+            }
+
+            .comparison-item {
+                text-align: center;
+            }
+
+            .comparison-item h4 {
+                color: #228B22;
+                font-size: 16px;
+                margin-bottom: 15px;
+                font-weight: 600;
+            }
+
+            .placeholder-image {
+                height: 250px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #999;
+                font-size: 14px;
+                border: 2px solid #ddd;
+                background-size: cover;
+                background-position: center;
+                overflow: hidden;
+            }
+            
+            .placeholder-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 6px;
+            }
+
+            /* Similarities & Differences */
+            .comparison-content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+                margin-top: 30px;
+            }
+
+            .content-box {
+                background: #f9f9f9;
+                padding: 25px;
+                border-radius: 10px;
+                border-left: 4px solid #228B22;
+            }
+
+            .content-box h4 {
+                color: #228B22;
+                font-size: 18px;
+                margin: 0 0 15px 0;
+            }
+
+            .content-box ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .content-box li {
+                padding: 8px 0;
+                color: #555;
+                font-size: 14px;
+                border-bottom: 1px solid #e0e0e0;
+            }
+
+            .content-box li:last-child {
+                border-bottom: none;
+            }
+
+            .content-box li:before {
+            
+                color: #228B22;
+                font-weight: bold;
+                margin-right: 8px;
+            }
+
+            /* Website References */
+            .website-ref {
+                background: #e8f5e9;
+                padding: 15px;
+                border-radius: 8px;
+                margin: 20px 0;
+                border-left: 4px solid #228B22;
+            }
+
+            .website-ref strong {
+                color: #228B22;
+            }
+
+            .website-ref p {
+                margin: 5px 0;
+                color: #555;
+                font-size: 14px;
+            }
+
+            /* Improvements */
+            .improvements-list {
+                background: #f9f9f9;
+                padding: 25px;
+                border-radius: 10px;
+                margin-top: 20px;
+            }
+
+            .improvements-list h4 {
+                color: #228B22;
+                margin-top: 0;
+            }
+
+            .improvement-item {
+                padding: 10px 0;
+                color: #555;
+                font-size: 14px;
+                border-bottom: 1px solid #e0e0e0;
+            }
+
+            .improvement-item:last-child {
+                border-bottom: none;
+            }
+
+            .improvement-item:before {
+                
+                color: #228B22;
+                font-weight: bold;
+                margin-right: 8px;
+            }
+
+            /* Table for quick comparison */
+            .comparison-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+                background: white;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 15px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+                font-size: 14px;
+            }
+
+            .comparison-table th {
+                background-color: #228B22;
+                color: white;
+                font-weight: 600;
+            }
+
+            .comparison-table tr:hover {
+                background-color: #f9f9f9;
+            }
+
+            .comparison-table td.positive {
+                color: #228B22;
+                font-weight: 600;
+            }
+
+            .comparison-table td.neutral {
+                color: #666;
+            }
+
+            @media (max-width: 1024px) {
+                .comparison-grid,
+                .comparison-content {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="wel">Welcome to EcoMart</div><!--This is a welcome message to the customers-->
+            <div class="comp"><!--This contains the navigation links to the company pages-->
+                <a class="blog" href="Blog-EcoMart.html">Blog</a><!--Navigation link to Blog page-->
+                <a class="about" href="About-EcoMart.html">About Us</a><!--Navigation link to About Us page-->
+                <a class="research" href="Research-EcoMart.html">Research</a><!--Navigation link to Research page-->
+            </div>
+            <div class="logreg"><!--This contains the navigation links to the login and register page-->
+                <a href="Login-EcoMart.html" class="login">Login</a><!--Navigation link to Login page-->
+                <a href="Register-EcoMart.html" class="register">Register</a><!--Navigation link to Register page-->
+            </div>
+        </header>
+        <div class="secondheader"><!--This is the second header of the web page-->
+            <div class="logotopleft"><!--This contains the hyperlink and logo image-->
+                <a href="/Web Pages/Home-EcoMart.html"><!--This is the link to the home page-->
+                    <img src="/Icons/EcoMart.png" alt="EcoMart Logo" style="width: 125px; height: 44px;"><!--This is the store logo at the top left corner of the page-->
+                </a>
+            </div>
+            <div class="cust"><!--This contains the navigation links to the home and products page-->
+                <a class="home" href="/Web Pages/Home-EcoMart.html">Home</a><!--Navigation link to Home page-->
+                <a class="products" href="Products-EcoMart.html">Products</a><!--Navigation link to Products page-->
+            </div>
+            <div class="searchbar"><!--This contains the elements for the search bar-->
+                <div class="search">
+                    <input type="text" name="Search" placeholder="Search for products..." class="searchText"><!--This is the search input field-->
+                </div>
+                <div class="button">
+                    <button class="searchBtn"></button><!--This is the search button-->
+                </div>
+            </div>
+            <div class="itembox"><!--This contains the link and icon of the wishlist and cart page-->
+                <a class="wishlist" href="Wishlist-EcoMart.html"><!--Navigation link to Wishlist page-->
+                    <img src="/Icons/heart-solid.png" alt="WishList Icon" height="40px" width="40px"><!--This is the icon of the wishlist page-->
+                </a>
+                <a class="cart" href="Cart-EcoMart.html"><!--Navigation link to Cart page-->
+                    <img src="/Icons/cart.png" alt="Cart Icon" height="40px" width="40px"><!--This is the icon of the cart page-->
+                </a>
+            </div>
+        </div>
+
+        <div class="research-container"><!--This is container that holds the main content of the research page-->
+
+
+            <div class="research-header"><!--This holds the header of the research page-->
+                <h1>Research & Website Comparison</h1><!--This is the main heading of the research page-->
+                <p>Comprehensive analysis of sustainable e-commerce websites and detailed comparisons of all EcoMart pages</p><!--This is the subheading of the research page-->
+            </div>
+
+            <!-- HOME PAGE COMPARISON with the  Reference website  -->
+            <div class="page-comparison-section">
+                <h2>1. HOME PAGE</h2>
+                <p class="page-subtitle">Comparison with Beeswrap.com</p>
+
+                <div class="visual-comparison-box"><!--This container holds the visual comparison for the selected page-->
+                    <h3>Visual Comparison</h3>
+                    <div class="comparison-grid">
+                        <div class="comparison-item">
+                            <h4>Beeswrap (Reference)</h4>
+                            <div class="placeholder-image">
+                                <img src="/Photos/Bee's Wrsp home page.png" alt="Beeswrap Reference"><!--This is the placeholder image for the reference website-->
+                            </div>
+                        </div>
+                        <div class="comparison-item">
+                            <h4>EcoMart Home Page</h4>
+                            <div class="placeholder-image">
+                                <img src="/Photos/Home page .png" alt="EcoMart Homepage"><!--This is the placeholder image for the selected EcoMart page-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="website-ref"><!--This contains the reference website link and the reason why it was referenced-->
+                    <strong>Reference Website:</strong>
+                    <p><a href="https://www.beeswrap.com/" target="_blank" style="color: #007bff;">https://www.beeswrap.com/</a></p>
+                    <p><strong>Why Referenced:</strong> Leading eco-friendly brand with excellent banner design, product showcasing and sustainability messaging. Strong focus on visual storyTelling and customer testimonials.</p>
+                </div>
+
+                <div class="comparison-content">
+                    <div class="content-box"><!--This is a content box for the similarities section-->
+                        <h4>Similarities</h4>
+                        <ul>
+                            <li>Both websites focuses on eco-friendly/sustainable products.</li>
+                            <li>Both have top navigation or products showcase features .</li>
+                            <li>"Shop Now" CTA (a visual queue (a clickable button or link)) buttons  both have same designs.</li>
+                            <li>Both  include customer reviews/brand story.</li>
+                        </ul>
+                    </div>
+                    <div class="content-box"><!--This is a content box for the differences section-->
+                        <h4>Differences</h4>
+                        <ul>
+                            <li>Bee's wrap is a fully functional in cart, checkout, backend and uses databases </li>
+                            <li>Our website is a static website(HTML/CSS/ Basics of Javascript only) no real cart logic.  </li>
+                            <li><strong>Bee's wrap has professional UI/UX designs, filters , and accessibility.</li>
+                            <li><strong>Navigation:</strong> EcoMart has search bar in header; Beeswrap has top navigation only</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="improvements-list"><!--This container holds the list of improvements made to the website-->
+                    <h4> Improvements Made</h4>
+                    <div class="improvement-item">Implemented product image with hover slider.</div>
+                    <div class="improvement-item">Clear top categories section and link them to their own category.</div>
+                    <div class="improvement-item">Well structured and commented HTML</div>
+                    <div class="improvement-item">Better color contrast for WCAG compliance(WCAG compliance means making a website easy to use for everyone, including people with disabilities)</div>
+                </div>
+            </div>
+
+            <!-- PRODUCTS PAGE COMPARISON with the reference website  -->
+            <div class="page-comparison-section">
+                <h2>2. PRODUCTS PAGE</h2>
+                <p class="page-subtitle">Comparison with Amazon.com</p>
+
+                <div class="visual-comparison-box">
+                    <h3>Visual Comparison</h3>
+                    <div class="comparison-grid">
+                        <div class="comparison-item">
+                            <h4>Amazon (Reference)</h4>
+                            <div class="placeholder-image">
+                                <img  style = "object-fit: contain;" src="/Photos/Amazon-com-products.png" alt="Amazon Reference">
+                            </div>
+                        </div>
+                        <div class="comparison-item">
+                            <h4>EcoMart Products Page</h4>
+                            <div class="placeholder-image">
+                                <img src="/Photos/product page 111.png" alt="EcoMart Products">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="website-ref">
+                    <strong>Reference Website:</strong>
+                    <p><a href="https://www.amazon.com/s?k=products&crid=2R355RWZ0I2NP&sprefix=produc%2Caps%2C362&ref=nb_sb_noss_2" target="_blank" style="color: #007bff;">https://www.amazon.com/</a></p>
+                    <p><strong>Why Referenced:</strong> Industry-leading e-commerce platform with optimized product discovery, filtering, sorting, and efficient catalog organization. Gold standard for e-commerce UX.</p>
+                </div>
+
+                <div class="comparison-content">
+                    <div class="content-box">
+                        <h4> Similarities</h4>
+                        <ul>
+                            <li>Both websites shows products image, rating stars, discount and price.</li>
+                            <li>Both have Add to Cart / Buy Now / Wishlist buttons which helps to buy products</li>
+                            <li>Both focus on helping users decide before buying</li>
+                            <li>Both useing clear call-to-action buttons(means that buttons that guide users clearly to the next action.)</li>
+                        </ul>
+                    </div>
+                    <div class="content-box">
+                        <h4> Differences</h4>
+                        <ul>
+                            <li><strong>Amazon uses a fully dynamic ecommerce system (real cart, checkout, user account, backend and other advance tools and technologies).</li>
+                            <li><strong>Our site is static (HTML/CSS/JS only), no real purchase flow which doesnot have any backend features. Its just a sample of a website.</li>
+                            <li><strong>Amazon has detailed descriptions, reviews, delivery & return informartion which helps users to easily filter and read all the information.</li>
+                            <li><strong>Our website has limited products and details.</li>
+                        
+                
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="improvements-list">
+                    <h4>Improvements Made</h4>
+                    <div class="improvement-item">Added images cycling on product hover for multiple views.</div>
+                    <div class="improvement-item">Implemented category carousels for easier navigation.</div>
+                    <div class="improvement-item">Better discount display in red color with percentage savings.</div>
+                    <div class="improvement-item">We have implemented well-structured and readable HTML code.</div>
+                    <div class="improvement-item">Added sustainability badges/labels for eco-products.</div>
+                    <div class="improvement-item">Good foundation for adding backend later.</div>
+                </div>
+            </div>
+
+            <!--  BLOG PAGE COMPARISON with the reference website   -->
+            <div class="page-comparison-section">
+                <h2>3. BLOG PAGE</h2>
+                <p class="page-subtitle">Comparison with EcoMart.app</p>
+
+                <div class="visual-comparison-box">
+                    <h3>Visual Comparison</h3>
+                    <div class="comparison-grid">
+                        <div class="comparison-item">
+                            <h4>EcoMart Blog (Reference)</h4>
+                            <div class="placeholder-image">
+                                <img src="/Photos/blog page .png" alt="Blog Reference">
+                            </div>
+                        </div>
+                        <div class="comparison-item">
+                            <h4>EcoMart Blog Page</h4>
+                            <div class="placeholder-image">
+                                <img src="/Photos/Blog pAGE.png" alt="EcoMart Blog">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="website-ref">
+                    <strong>Reference Website:</strong>
+                    <p><a href="https://ecomart.app/blogs/our-blog" target="_blank" style="color: #007bff;">https://ecomart.app/</a></p>
+                    <p><strong>Why Referenced:</strong> Excellent content organization, engaging card-based layout, clear visual hierarchy, and effective sustainability education through blog content.</p>
+                </div>
+
+                <div class="comparison-content">
+                    <div class="content-box">
+                        <h4> Similarities</h4>
+                        <ul>
+                            <li>Both websites use eco-friendly, sustainability focused blog pages specially about the Impact of technology in modern era.</li>
+                            <li>Both websites use blog cards with images and contain title</li>
+                            <li>Functionalable attractiveness of both websites encourages users to read full content</li>
+                            <li>Both support brand awareness and education about the technology.</li>
+                            <li>Both websites follow a clean, minimal layout design.</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="content-box">
+                        <h4> Differences</h4>
+                        <ul>
+                            <li><strong>EcoMart loads blogs dynamically (CMS / backend) logics.</li>
+                            <li><strong>Our blog is static (HTML +  css + JS only)</li>
+                            <li><strong>Referenced EcoMart site opens separate blog pages</li>
+                            <li><strong>Our site opens contents using modal pop-ups using javascript.</li>
+                            <li><strong>Referenced EcoMart site following WCAG accessibility standards.</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="improvements-list">
+                    <h4>Improvements Made</h4>
+                    <div class="improvement-item">We have implemented smooth modal animations</div>
+                    <div class="improvement-item">We have added conclusion section for better content closure.</div>
+                    <div class="improvement-item">Improved card hover effects with elevation effect.</div>
+                    <div class="improvement-item">Strong educational content.</div>
+                    <div class="improvement-item">Enhanced modal closing functionality (click outside)</div>
+                    <div class="improvement-item">We have implemented proper image optimization.</div>
+                </div>
+            </div>
+
+            <!-- ABOUT US PAGE COMPARISON  -->
+            <div class="page-comparison-section">
+                <h2>4. ABOUT US PAGE</h2>
+                <p class="page-subtitle">Custom Design with Professional Standards</p>
+
+                <div class="visual-comparison-box">
+                    <h3>Visual Comparison</h3>
+                    <div class="comparison-grid">
+                        <div class="comparison-item">
+                            <h4>Industry Standard (Reference)</h4>
+                            <div class="placeholder-image">
+                                <img src="/Photos/Aboutus1.png" alt="Industry Standard">
+                            </div>
+                        </div>
+                        <div class="comparison-item">
+                            <h4>EcoMart About Page</h4>
+                            <div class="placeholder-image">
+                                <img  style = "object-fit:cover"src="/Photos/aboutus.png" alt="EcoMart About">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="website-ref">
+                    <strong>Reference Website:</strong>
+                    <p><a href="https://buffer.com/about" target="_blank" style="color: #007bff;">https://buffer.com/</a></p>
+                    <p><strong>Why Referenced:</strong> Created a unique About Us page combining best practices from tech companies, featuring team portfolios, interactive modals, and feedback forms for better user engagement.</p>
+                </div>
+
+                <div class="comparison-content">
+                    <div class="content-box">
+                        <h4> Similarities</h4>
+                        <ul>
+                            <li>Both websites introduces brand mission and values clearly.</li>
+                            <li>Both have team member profiles with images</li>
+                            <li>Have included feedback/contact form</li>
+                            <li>Showing each and every member of team contact information</li>
+                            <li>Showing individual skills and experience in tech and individual.</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="content-box">
+                        <h4> Differences </h4>
+                        <ul>
+                            <li><strong>Buffer sites are dynamic, ours is static.</li>
+                            <li><strong>Have team cards lift up with shadow on hover; smooth 0.4s transition</li>
+                            <li><strong>Professional sites have polished design, responsive grids, smooth animations; Our website is simpler.</li>
+                            <li><strong>Modals in our page is popup-based. Buffer sites often use dedicated profile pages which is professional.</li>
+                            <li><strong>Feedback Form has custom styling inputs with focus states and submit button.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="improvements-list">
+                    <h4> Improvements Made</h4>
+                    <div class="improvement-item">We have implemented interactive modals for team profiles.</div>
+                    <div class="improvement-item">We have implemented clear feedback form with alerts.</div>
+                    <div class="improvement-item">We have implemented organized header, navigation, and footer.</div>
+                    <div class="improvement-item">We have implemented lean HTML with comments for readability.</div>
+
+                </div>
+            </div>
+
+            <!-- LOGIN PAGE COMPARISON  -->
+            <div class="page-comparison-section">
+                <h2>5. LOGIN PAGE</h2>
+                <p class="page-subtitle">Custom Authentication Design</p>
+
+                <div class="visual-comparison-box">
+                    <h3>Visual Comparison</h3>
+                    <div class="comparison-grid">
+                        <div class="comparison-item">
+                            <h4>Standard Login (Reference)</h4>
+                            <div class="placeholder-image">
+                                <img src="/Photos/loginpage1.png" alt="Standard Login">
+                            </div>
+                        </div>
+                        <div class="comparison-item">
+                            <h4>EcoMart Login Page</h4>
+                            <div class="placeholder-image">
+                                <img src="/Photos/login page .png" alt="EcoMart Login">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="website-ref">
+                    <strong>Reference Website:</strong>
+                     <p><a href="https://dribbble.com/session/new" target="_blank" style="color: #007bff;">https://dribble.com/</a></p>
+                    <p><strong>Why Referenced:</strong> Secure and user-friendly authentication page with background imagery, form validation, "Remember Me" checkbox, Google Authentication option, and password security.</p>
+                </div>
+
+                <div class="comparison-content">
+                    <div class="content-box">
+                        <h4>Similarities</h4>
+                        <ul>
+                            <li>Both sites welcomes the user with a friendly heading.</li>
+                            <li>Both sites have email and password fields.</li>
+                            <li>Both sites offer alternative login options (e.g: Google or register)</li>
+                            <li>Both sites provides links to register for new users who want to visit the site.</li>
+                            <li>Both displaying the brand logo clearly with the background image .</li>
+                        
+                        </ul>
+                    </div>
+                    <div class="content-box">
+                        <h4>Differences</h4>
+                        <ul>
+                            <li><strong>Design of Dribble page looks modern and polished but our page is basic.</li>
+                            <li><strong>Responsiveness of Dribble works well on all device but our page is less responsive comparing to dribble.</li>
+                            <li><strong>Validation of the Dribble shows errors instantly; Our page doesn’t check inputs yet.</li>
+                            <li><strong>Accessibility of the Dribble supports keyboard & screen readers but our page doesn’t support such features.</li>
+                            <li><strong>Interactions of Dribble has hover effects and animations but our page is static.</li>
+                        
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="improvements-list">
+                    <h4> Improvements Made</h4>
+                    <div class="improvement-item">We have implemented clear “New here? Register” link.</div>
+                    <div class="improvement-item">We have implemented background image and flex layout for center alignment.</div>
+                    <div class="improvement-item">We have implemented simple and readable HTML structure with comments.</div>
+                    <div class="improvement-item">Password field masking for security</div>
+                
+                </div>
+            </div>
+
+            <!--  Header page comparision -->
+            <div class="page-comparison-section">
+                <h2>6. Header Section </h2>
+                <p class="page-subtitle">Design of Header Section </p>
+
+                <div class="visual-comparison-box" >
+                    <h3>Visual Comparison</h3>
+                    <div class="comparison-grid">
+                        <div class="comparison-item">
+                            <h4>Standard Header (Reference)</h4>
+                            <div class="placeholder-image">
+                                <img  style = "width: 500px; height:500px ;background-size:contain;object-fit:contain" src="/Photos/Header22.png" alt="Standard Registration">
+                            </div>
+                        </div>
+                        <div class="comparison-item">
+                            <h4>EcoMart Register Page</h4>
+                            <div class="placeholder-image">
+                                <img style="object-fit:contain" src="/Photos/Header section.png" alt="EcoMart Register">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="website-ref">
+                    <strong>Reference Website:</strong>
+                    <p><a href="https://store.ecomartworld.com/?srsltid=AfmBOormp0xRJtQ1Xmj6ZOnVTjnMbuWu0vJhcP7zkH_n8J0ztVXjp1oo" target="_blank" style="color: #007bff;">https://Ecomart.com/</a></p>
+                    <p><strong>Why Referenced:</strong> Complete user registration flow with email verification, password confirmation, terms acceptance and alternative registration methods.</p>
+                </div>
+
+                <div class="comparison-content">
+                    <div class="content-box">
+                        <h4> Similarities</h4>
+                        <ul>
+                            <li>Both websites have logo on the top left linking to Home.</li>
+                            <li>Both sites include main navigation links (Home, Products, Blog, About, Research wishlist and cart icons as well.).</li>
+                            <li>Both sites have Login/Register buttons.</li>
+                            <li>Both have a search bar for products.</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="content-box">
+                        <h4> Differences </h4>
+                        <ul>
+                            <li><strong>Reference site has modern styling, spacing, and hover effects but our header is simpler.</li>
+                            <li>Reference EcoMart header adjusts smoothly on all screen sizes but our site has basic responsiveness.</li>
+                            <li><strong>Reference EcoMart site may include dropdowns, animations, and sticky behavior but our header is static.</li>
+                            <li><strong>Accessibility of the Reference Ecomart header likely uses ARIA roles and keyboard navigation but our header lacks full accessibility support.</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="improvements-list">
+                    <h4> Improvements Made</h4>
+                    <div class="improvement-item">We have implemented two-level header for navigation clarity.</div>
+                    <div class="improvement-item">We have implemented search bar with button.</div>
+                    <div class="improvement-item">We have included wishlist and cart icons for quick access.</div>
+                    <div class="improvement-item">We have structured HTML with clear comments for proper readability.</div>
+
+                </div>
+            </div>
+        </div>
+        <div class="foot"> <!--A container to create a footer-->
+            <div class="secondfooter"> <!--Container to create a second footer-->
+                <div class="bottomLink"> <!--Container for both logo and social media-->
+                    <img src="/Icons/EcoMart.png" alt="EcoMart Logo" style="width: 250px; height: 88px; position: relative; float: right; margin-top: 25px;"> <!--Logo of the store-->
+                    <div class="social"> <!--Container to store Social Media Links-->
+                        <a href="https://youtu.be/dQw4w9WgXcQ?si=kJT0Y42J-oUOEi-n">
+                            <img src="/Icons/youtube-brands-solid-full.png" alt="youtube" class="yt">
+                        </a>
+                        <a href="https://www.instagram.com/reel/CfIEj18pjAz/?igsh=MXVndTluemhuaWVreQ==">
+                            <img src="/Icons/instagram-brands-solid-full.png" alt="instagram" class="insta">
+                        </a>
+                        <a href="https://www.facebook.com/share/p/1G6SPSyAAy/">
+                            <img src="/Icons/facebook-brands-solid-full.png" alt="facebook" class="fb">
+                        </a>
+                        <a href="https://x.com/allreactionvidz/status/1249541936991604737?s=20">
+                            <img src="/Icons/square-x-twitter-brands-solid-full.png" alt="twitter" class="tweet">
+                        </a>
+                        <a href="https://pin.it/4QQPtgu0i">
+                            <img src="/Icons/pinterest-brands-solid-full.png" alt="pinterest" class="pin">
+                        </a>
+                    </div>
+                </div>
+                <div class="customerservice" style="margin-left: 200px; margin-right: auto; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"> <!--Container for customer service pages-->
+                    <div style="font-weight: bold; color: black; margin-left: 25px; margin-top: 0px;">
+                        <h3>Customer Service</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="/Web Pages/Home-EcoMart.html"  style="color: black; font-size: 18px;">Home</a> <!-- Navigation link to Home page -->
+                        </li>
+                        <li>
+                            <a href="Products-EcoMart.html" style="color: black; font-size: 18px;">Products</a> <!-- Navigation link to Product page -->
+                        </li>
+                        <li>
+                            <a href="Wishlist-EcoMart.html" style="color: black; font-size: 18px;">WishList</a> <!-- Navigation link to WishList page -->
+                        </li>
+                        <li>
+                            <a href="Cart-EcoMart.html" style="color: black; font-size: 18px;">Cart</a> <!-- Navigation link to Cart page -->
+                        </li>
+                    </ui>
+                </div>
+                <div class="company" style="margin-right: 450px; margin-left: auto; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"> <!--Container for Company details pages-->
+                    <div style="font-weight: bold; color: black; margin-left: 25px; margin-top: 0px;">
+                        <h3>Get to know us</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="Blog-EcoMart.html" style="color: black; font-size: 18px;">Blog</a> <!-- Navigation link to Blog page -->
+                        </li>
+                        <li>
+                            <a href="About-EcoMart.html" style="color: black; font-size: 18px;">About Us</a> <!-- Navigation link to About Us page -->
+                        </li>
+                        <li>
+                            <a href="Research-EcoMart.html" style="color: black; font-size: 18px;">Research</a> <!-- Navigation link to Research page -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright"> <!--Container for Footer-->
+                Copyright © 2026 Ecomart Store. All Rights Reserved.
+            </div>
+        </div>
+    </body>
+</html>    
