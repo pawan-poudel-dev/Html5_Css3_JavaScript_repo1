@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="Icon" href="/Icons/EcoMart Title(1).png" type="image/png"> <!-- Sets the title picture for the webpage -->
+        <title>Home - EcoMart</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Adjusts layout for different screen sizes-->
+        <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 -->
+        <meta name="description" content="EcoMart - Sustainable eco-friendly products for personal care, kitchen, home, and lifestyle">
+        <meta name="keywords" content="eco-friendly, sustainable products, plastic-free">
+        <meta name="author" content="Krishna Gurung">
+        <meta name="robots" content="index, follow">
+        
+        <link rel="stylesheet" href="/Web Pages/Other Pages/EcoMart.css"> <!-- Links to external CSS file for styling -->
+        <style> /*Internal CSS*/
+            body{
+                margin: 0px;
+                padding: 0px;
+                background-repeat: no-repeat;
+                background-color: white;
+                background-size: cover;
+                background-attachment: fixed;
+                overflow-x: hidden;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            a{
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header> 
+            <div class="wel">Welcome to EcoMart</div><!--This is a welcome message to the user-->
+            <div class="comp"><!--Container to store page hyperlinks-->
+                <a class="blog" href="/Web Pages/Other Pages/Blog-EcoMart.html">Blog</a> <!-- Navigation link to Blog page -->
+                <a class="about" href="/Web Pages/Other Pages/About-EcoMart.html">About Us</a> <!-- Navigation link to About Us page -->
+                <a class="research" href="/Web Pages/Other Pages/Research-EcoMart.html">Research</a> <!-- Navigation link to Research page -->
+            </div>
+            <div class="logreg">
+                <a href="/Web Pages/Other Pages/Login-EcoMart.html" class="login">Login</a><!--Button for login pop-up-->
+                <a href="/Web Pages/Other Pages/Register-EcoMart.html" class="register">Register</a><!--Button for register pop-up-->
+            </div>
+        </header>
+        <div class="secondheader"> <!--Container for a second header-->
+            <div class="logotopleft">
+            <a href="/Web Pages/Home-EcoMart.html">
+                <img src="/Icons/EcoMart.png" alt="EcoMart Logo" style="width: 125px; height: 44px;"> <!-- Logo image linking to home page -->
+            </a>
+            </div>
+            <div class="cust"><!--Container to store page hyperlinks-->
+                <a class="home" href="/Web Pages/Home-EcoMart.html">Home</a> <!-- Navigation link to Home page -->
+                <a class="products" href="/Web Pages/Other Pages/Products-EcoMart.html">Products</a> <!-- Navigation link to Product page -->
+            </div>
+            <div class="searchbar"><!--Container to store search bar elements-->
+                <div class="search">
+                    <input type="text" name="Search" placeholder="Search for products..." class="searchText"> <!--Text bar for product search-->
+                </div>
+                <div class="button">
+                    <button class="searchBtn"></button><!--Search button for search-->
+                </div>
+            </div>
+            <div class="itembox"> <!--Container to store store page icons-->
+                <a class="wishlist" href="/Web Pages/Other Pages/WishList-EcoMart.html">
+                    <img src="/Icons/heart-solid.png" alt="WishList Icon" height="40px" width="40px">
+                </a> <!-- Navigation link to WishList page -->
+                <a class="cart" href="/Web Pages/Other Pages/Cart-EcoMart.html">
+                    <img src="/Icons/cart.png" alt="Cart Icon" height="40px" width="40px">
+                </a> <!-- Navigation link to Cart page -->
+            </div>
+        </div>
+        <section class="banner-photo"><!--Container for banner photo-->
+            <div class="black-screen"></div><!--A dark overlay to enhance the visual-->
+            <div class="white-box"><!--This is a white box containing the banner text and button-->
+                <span class="text-box"><!--Container for banner text-->
+                    <h1>This year, take small steps toward using less plastic</h1>
+                    <label style="font-size: 16px; margin-top: 0px; margin-bottom: 20px;">Discover sustainable alternatives for everyday products</label>
+                </span>
+                <a href="/Web Pages/Other Pages/Products-EcoMart.html">
+                    <button type="button" class="shop-now">Shop Now</button><!--This is a button that connects to the product page-->
+                </a>
+            </div>
+        </section>
+        <section class="most-loved"><!--This section displays the most loved products on the website-->
+            <h2 style="text-align: center;">Shop our most loved products:</h2><!--Heading for the section-->
+            <div class="contain-top-pro"><!--This container holds the top products displayed on the homepage and the button to view all products-->
+            <div class="top-pro"><!--This container holds the top products-->
+                <a href="/Web Pages/Other Pages/Organic Cotton Face Towels.html" class="item" data-images='["/Product Images/Personal Care Items/download.jpg","/Product Images/Personal Care Items/Ultra Soft Cotton Towels for Everyday Comfort.jpg","/Product Images/Personal Care Items/The softest towels youll ever own, they dry quickly, and look good, too_.jpg"]'><!--A hyperlink containing the product image and details along with image dataset-->
+                    <div>
+                        <img src="/Product Images/Personal Care Items/The softest towels youll ever own, they dry quickly, and look good, too_.jpg" alt="item" class="itemImage"><!--First image of the product-->
+                        <span class="itmName">Organic Cotton Face Towels</span><!--Name of the product-->
+                        <span class="rate"><!--Ratings given to the product-->
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                        </span>
+                        <span class="stock">321 in stock</span><!--Amount of items available in stock-->
+                        <span class="pricedis">
+                            <span class="price">Rs.1120</span><!--Final price of the product-->
+                            <label style="color: gray; margin-left: 5px;">-/</label><span class="OgPrice">Rs.2495</span><!--Original price of the product-->
+                            <span class="dis">-55%</span><!--Discount rate on the product-->
+                        </span>
+                    </div>
+                </a>
+                <a href="/Web Pages/Other Pages/Castile Soap-Natural All-Purpose Cleaner.html" class="item" data-images='["/Product Images/Home & Cleaning items/ecea66c0.jpeg","/Product Images/Home & Cleaning items/Castile Soap • 16 fl oz.jpg"]'>
+                    <div>
+                        <img src="/Product Images/Home & Cleaning items/Castile Soap • 16 fl oz.jpg" alt="item" class="itemImage">
+                        <span class="itmName">Castile Soap-Natural All-Purpose Cleaner</span>
+                        <span class="rate">
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gray;">★</span>
+                        </span>
+                        <span class="stock">1k+ in stock</span>
+                        <span class="pricedis">
+                            <span class="price">Rs.190</span>
+                            <label style="color: gray; margin-left: 5px;"></label><span class="OgPrice"></span>
+                            <span class="dis"></span>
+                        </span>
+                    </div>
+                </a>
+                <a href="/Web Pages/Other Pages/A5 Eco-friendly notebook.html" class="item" data-images='["/Product Images/Lifestyle items/download (2).jpg","/Product Images/Lifestyle items/download (3).jpg","/Product Images/Lifestyle items/Caderno Kraft para Anotações A5 _ Shopee Brasil.jpg"]'>
+                    <div>
+                        <img src="/Product Images/Lifestyle items/Caderno Kraft para Anotações A5 _ Shopee Brasil.jpg" alt="item" class="itemImage">
+                        <span class="itmName">A5 Eco-friendly notebook set of 5</span>
+                        <span class="rate">
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gray;">★</span>
+                        </span>
+                        <span class="stock">1k+ in stock</span>
+                        <span class="pricedis">
+                            <span class="price">Rs.650</span>
+                            <label style="color: gray; margin-left: 5px;">-/</label><span class="OgPrice">Rs.800</span>
+                            <span class="dis">-19%</span>
+                        </span>
+                    </div>
+                </a>
+                <a href="/Web Pages/Other Pages/Refillable Shampoo and conditioner Bottles.html" class="item" data-images='["/Product Images/Personal Care Items/shop now! reusable hand wash & lotion bottles.jpg","/Product Images/Personal Care Items/shop reusable shower bottles now!.jpg"]'>
+                    <div>
+                        <img src="/Product Images/Personal Care Items/shop reusable shower bottles now!.jpg" alt="item" class="itemImage">
+                        <span class="itmName">Refillable Shampoo and conditioner Bottles</span>
+                        <span class="rate">
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                            <span class="star" style="color: gold;">★</span>
+                        </span>
+                        <span class="stock">3k+ in stock</span>
+                        <span class="pricedis">
+                            <span class="price">Rs.130</span>
+                            <label style="color: gray; margin-left: 5px;"></label><span class="OgPrice"></span>
+                            <span class="dis"></span>
+                        </span>
+                    </div>
+                </a>
+            </div>
+            <a href="/Web Pages/Other Pages/Products-EcoMart.html" class="more">
+                <button type="button">></button><!--Button to view all products-->
+            </a>
+            </div>
+        </section>
+        <section class="topcategory"><!--This section displays the top categories on the website-->
+            <h2 style="text-align: center;">Top Categories:</h2><!--Heading for the section-->
+            <div class="categories"><!--Container holding the different categories-->
+                <div class="category-box"><!--This is a category box for each category-->
+                    <img src="/Product Images/Kitchen Items/Sustainability Made Stylish.jpg" alt="img">
+                    <div class="categorydesc">
+                        <label for="name" style="text-align: center; font-size: 16px;">Kitchen Products</label><!--Name of the category-->
+                        <a href="/Web Pages/Other Pages/Products-EcoMart.html#kitch">
+                            <button type="button">See Products</button><!--Button to view all products in this category-->
+                        </a>
+                    </div>
+                </div>
+                <div class="category-box">
+                    <img src="/Product Images/Personal Care Items/Plastic-Free Bathroom Swaps for Eco-Friendly Living.jpg" alt="img">
+                    <div class="categorydesc">
+                        <label for="name" style="text-align: center; font-size: 16px;">Personal Care Items</label>
+                        <a href="/Web Pages/Other Pages/Products-EcoMart.html#pers">
+                            <button type="button">See Products</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="category-box">
+                    <img src="/Product Images/Lifestyle items/Eco-Friendly Gifts_ Sustainable, Thoughtful, and Precious for Men.jpg" alt="img">
+                    <div class="categorydesc">
+                        <label for="name" style="text-align: center; font-size: 16px;">Lifestyle products</label>
+                        <a href="/Web Pages/Other Pages/Products-EcoMart.html#lifes">
+                            <button type="button">See Products</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="category-box">
+                    <img src="/Product Images/Home & Cleaning items/download.jpg" alt="img">
+                    <div class="categorydesc">
+                        <label for="name" style="text-align: center; font-size: 16px;">Home & Cleaning Products</label>
+                        <a href="/Web Pages/Other Pages/Products-EcoMart.html#hom">
+                            <button type="button">See Products</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cust-review"><!--This section displays customer reviews-->
+            <h2 style="margin-top: 30px; text-align: center;">Customer Reviews</h2><!--Heading for the section-->
+            <button type="button" class="review-arrow-left">‹</button><!--Left arrow button to navigate reviews-->
+            <div class="reviews-container"><!--Container holding all the reviews-->
+                <div class="review-item active"><!--Review that is displayed on screen-->
+                    <span class="text-box"><!--Container that displays review text-->
+                        "I once bought a bamboo toothbrush from EcoMart, and I must say, the bristles are soft yet effective. Highly recommend!"
+                    </span>
+                    <span style="margin-top: 20px;"><!--Ratings given to the product-->
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                    </span><br>
+                    <span class="reviewer">- Johnny Joestar</span><!--Name of reviewer-->
+                </div>
+                <div class="review-item"><!--Review that is not displayed yet-->
+                    <span class="text-box">
+                        "EcoMart's tote bags are fantastic! Durable, stylish, and perfect for reducing plastic waste. Great quality!"
+                    </span>
+                    <span style="margin-top: 20px;"><!--Ratings given to the product-->
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                    </span><br>
+                    <span class="reviewer">- Sasha Blouse</span>
+                </div>
+                <div class="review-item">
+                    <span class="text-box">
+                        "Switched to eco-friendly products from EcoMart and couldn't be happier! Everything is high quality and environmental friendly."
+                    </span>
+                    <span style="margin-top: 20px;"><!--Ratings given to the product-->
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                    </span><br>
+                    <span class="reviewer">- Michael De Santa</span>
+                </div>
+                <div class="review-item">
+                    <span class="text-box">
+                        "Best shopping experience ever! The customer service is excellent and shipping is fast. Definitely coming back!"
+                    </span>
+                    <span style="margin-top: 20px;"><!--Ratings given to the product-->
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                    </span><br>
+                    <span class="reviewer">- Jolyene Kujo</span>
+                </div>
+            </div>
+            <button type="button" class="review-arrow-right">›</button>
+        </section>
+        <section class="story"><!--This section tells the story of EcoMart-->
+            <h2 style="margin-top: 30px; opacity: 1; z-index: 100;">Our Story</h2><!--Heading for the section-->
+            <div class="story-text"><!--Container holding the story text-->
+                <p>The idea of EcoMart started with a simple question: What if everyday shopping could help protect our planet?</p>
+                <p>As students learning modern web technologies, we wanted to create something meaningful — not just a website, but a vision. EcoMart represents our commitment to sustainability, ethical products, and responsible innovation.</p>
+                <p>We focus on offering eco-friendly personal care, kitchen, home, and lifestyle products that help reduce waste and support a healthier environment.</p>
+                <p>Every product, every click, and every choice at EcoMart is a step toward a greener tomorrow.</p>
+            </div>
+        </section>
+        <div class="foot"> <!--A container to create a footer-->
+            <div class="secondfooter"> <!--Container to create a second footer-->
+                <div class="bottomLink"> <!--Container for both logo and social media-->
+                    <img src="/Icons/EcoMart.png" alt="EcoMart Logo" style="width: 250px; height: 88px; position: relative; float: right; margin-top: 25px;"> <!--Logo of the store-->
+                    <div class="social"> <!--Container to store Social Media Links-->
+                        <a href="https://youtu.be/dQw4w9WgXcQ?si=kJT0Y42J-oUOEi-n">
+                            <img src="/Icons/youtube-brands-solid-full.png" alt="youtube" class="yt">
+                        </a>
+                        <a href="https://www.instagram.com/reel/CfIEj18pjAz/?igsh=MXVndTluemhuaWVreQ==">
+                            <img src="/Icons/instagram-brands-solid-full.png" alt="instagram" class="insta">
+                        </a>
+                        <a href="https://www.facebook.com/share/p/1G6SPSyAAy/">
+                            <img src="/Icons/facebook-brands-solid-full.png" alt="facebook" class="fb">
+                        </a>
+                        <a href="https://x.com/allreactionvidz/status/1249541936991604737?s=20">
+                            <img src="/Icons/square-x-twitter-brands-solid-full.png" alt="twitter" class="tweet">
+                        </a>
+                        <a href="https://pin.it/4QQPtgu0i">
+                            <img src="/Icons/pinterest-brands-solid-full.png" alt="pinterest" class="pin">
+                        </a>
+                    </div>
+                </div>
+                <div class="customerservice" style="margin-left: 200px; margin-right: auto; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"> <!--Container for customer service pages-->
+                    <div style="font-weight: bold; color: black; margin-left: 25px; margin-top: 0px;">
+                        <h3>Customer Service</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="/Web Pages/Home-EcoMart.html"  style="color: black; font-size: 18px;">Home</a> <!-- Navigation link to Home page -->
+                        </li>
+                        <li>
+                            <a href="/Web Pages/Other Pages/Products-EcoMart.html" style="color: black; font-size: 18px;">Products</a> <!-- Navigation link to Product page -->
+                        </li>
+                        <li>
+                            <a href="/Web Pages/Other Pages/Wishlist-EcoMart.html" style="color: black; font-size: 18px;">WishList</a> <!-- Navigation link to WishList page -->
+                        </li>
+                        <li>
+                            <a href="/Web Pages/Other Pages/Cart-EcoMart.html" style="color: black; font-size: 18px;">Cart</a> <!-- Navigation link to Cart page -->
+                        </li>
+                    </ul>
+                </div>
+                <div class="company" style="margin-right: 450px; margin-left: auto; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"> <!--Container for Company details pages-->
+                    <div style="font-weight: bold; color: black; margin-left: 25px; margin-top: 0px;">
+                        <h3>Get to know us</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="/Web Pages/Other Pages/Blog-EcoMart.html" style="color: black; font-size: 18px;">Blog</a> <!-- Navigation link to Blog page -->
+                        </li>
+                        <li>
+                            <a href="/Web Pages/Other Pages/About-EcoMart.html" style="color: black; font-size: 18px;">About Us</a> <!-- Navigation link to About Us page -->
+                        </li>
+                        <li>
+                            <a href="/Web Pages/Other Pages/Research-EcoMart.html" style="color: black; font-size: 18px;">Research</a> <!-- Navigation link to Research page -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright"> <!--Container for Footer-->
+                Copyright © 2026 Ecomart Store. All Rights Reserved.
+            </div>
+        </div>
+        <script src="/Web Pages/Other Pages/EcoMart.js">
+        </script>
+    </body>
+</html>

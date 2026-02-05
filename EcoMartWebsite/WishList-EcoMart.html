@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="Icon" href="/Icons/EcoMart Title(1).png" type="image/png"><!--Icon that displays infront of the title-->
+        <title>WishList - EcoMart</title><!--Title of the webpage that displays on the browser tab-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"><!--This ensures proper rendering and touch zooming on all devices-->
+        <meta charset="UTF-8"><!--Character encoding for the HTML document-->
+         <meta name="description" content="EcoMart Wishlist - Save your favorite eco-friendly products">//<!--Description of the webpage for SEO-->
+        <meta name="keywords" content="eco-friendly, sustainable products, wishlist">      <!--Keywords relevant to the webpage for SEO-->
+        <meta name="author" content="Krishna Gurung">//<!--Author of the webpage-->
+        <meta name="robots" content="index, follow">//<!--Instructs search engines to index the page and follow links-->
+        <link rel="stylesheet" href="EcoMart.css"><!--Link to the external CSS file for styling the webpage-->
+        <style>
+            body{
+                margin: 0px;
+                padding: 0px;
+                background-repeat: no-repeat;
+                background-color: whitesmoke;
+                background-size: cover;
+                background-attachment: fixed;
+                overflow-x: hidden;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            a{
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header> 
+            <div class="wel">Welcome to EcoMart</div><!--This is a welcome message to the user-->
+            <div class="comp"><!--Container to store page hyperlinks-->
+                <a class="blog" href="Blog-EcoMart.html">Blog</a><!--Navigation link to Blog page -->
+                <a class="about" href="About-EcoMart.html">About Us</a><!--Navigation link to About Us page -->
+                <a class="research" href="Research-EcoMart.html">Research</a><!--Navigation link to Research page -->
+            </div>
+            <div class="logreg">
+                <a href="Login-EcoMart.html" class="login">Login</a><!--Navigation link to Login page -->
+                <a href="Register-EcoMart.html" class="register">Register</a><!--Navigation link to Register page -->
+            </div>
+        </header>
+        <div class="secondheader"><!--Container for a second header-->
+            <div class="logotopleft">
+            <a href="/Web Pages/Home-EcoMart.html">
+                <img src="/Icons/EcoMart.png" alt="EcoMart Logo" style="width: 125px; height: 44px;"><!--EcoMart logo image linking to home page-->
+            </a>
+            </div>
+            <div class="cust"><!--Container that stores page hyperlinks-->
+                <a class="home" href="/Web Pages/Home-EcoMart.html">Home</a><!--Navigation link to Home page -->
+                <a class="products" href="Products-EcoMart.html">Products</a><!--Navigation link to Products page -->
+            </div>
+            <div class="searchbar"><!--Container to store search bar elements-->
+                <div class="search">
+                    <input type="text" name="Search" placeholder="Search for products..." class="searchText"><!--Search bar for product search-->
+                </div>
+                <div class="button">
+                    <button class="searchBtn"></button><!--Button to begin the searching process-->
+                </div>
+            </div>
+            <div class="itembox"><!--Container to store store page icons-->
+                <a class="wishlist" href="Wishlist-EcoMart.html"><!-- Navigation link to WishList page -->
+                    <img src="/Icons/heart-solid.png" alt="WishList Icon" height="40px" width="40px">
+                </a>
+                <a class="cart" href="Cart-EcoMart.html"> <!-- Navigation link to Cart page -->
+                    <img src="/Icons/cart.png" alt="Cart Icon" height="40px" width="40px">
+                </a>
+            </div>
+        </div>
+        <div class="wish"><!--This container store all the elements of the main body of wishlist page-->
+            <h2 style="text-align: center; margin: 0 auto;">My Wishlist</h2><!--Title of the wishlist page-->
+            <hr style="border: 3px solid rgb(159, 159, 159); border-radius: 30px; margin-top: 5px;"><!--Horizontal line below the title which seperates the title from the content-->
+            <div class="wishitm"><!--This is a container that stores the details about the items-->
+                <img src="/Product Images/Personal Care Items/The softest towels youll ever own, they dry quickly, and look good, too_.jpg" alt="item"><!--This is the front image of the product in the wishlist item container-->
+                <div class="productdes"><!--This container stores the description of the product-->
+                    <span class="itmName">Organic Cotton Face Towels</span><!--This is the name of the product-->
+                    <span class="itmDesc">Soft Absorbent Organic Cotton Washable Saliva Towel Face Wipes</span><!--This is the description of the product-->
+                    <span class="rate"><!--This is the container which stores the amount of ratings that the item has recieved-->
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                    </span>
+                    <span class="stock">321 in stock</span><!--This is the amount of items that are available in stock-->
+                    <span class="pricedis">
+                        <span class="price">Rs.1120</span><!--This is the final price of the item-->
+                        <label style="color: gray; margin-left: 5px;">-/</label><span class="OgPrice">Rs.2495</span><!--This is the original price of the item-->
+                        <span class="dis">-55%</span><!--This is the discount rate of the item-->
+                    </span> 
+                </div>
+                <div class="line"></div><!--This is a vertical line that seperates the item details from the buttons-->
+                <div class="wishlistbtns"><!--This container stores the buttons for the wishlist item-->
+                    <button class="mov2cart" style="background-color: greenyellow;">Move to Cart</button><!--Button to move the item to the cart-->
+                    <button class="saveforlater" style="background-color: orange;">Save for Later</button><!--Button to save the item for later-->
+                    <button class="remove" style="background-color: red;">Remove</button><!--Button to remove the item from the wishlist-->
+                </div>
+            </div>
+            <div class="wishitm">
+                <img src="/Product Images/Lifestyle items/Lumity_ Unlimited Power, Anytime, Anywhere.jpg" alt="item">
+                <div class="productdes">
+                    <span class="itmName">Solar-Powered Charger</span>
+                    <span class="itmDesc">Small DIY Solar Module is a compact solar panel that converts sunlight into low-voltage electricity. With 5-6 V output and 100-330 mA current, it's ideal for hobby projects and small batteries. To charge a phone, additional components like a battery and controller are needed.</span>
+                    <span class="rate">
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gray;">★</span>
+                    </span>
+                    <span class="stock">428 in stock</span>
+                    <span class="pricedis">
+                        <span class="price">Rs.500</span>
+                        <label style="color: gray; margin-left: 5px;"></label><span class="OgPrice"></span>
+                        <span class="dis"></span>
+                    </span> 
+                </div>
+                <div class="line"></div>
+                <div class="wishlistbtns">
+                    <button class="mov2cart" style="background-color: greenyellow;">Move to Cart</button>
+                    <button class="saveforlater" style="background-color: orange;">Save for Later</button>
+                    <button class="remove" style="background-color: red;">Remove</button>
+                </div>
+            </div>
+            <div class="wishitm">
+                <img src="/Product Images/Kitchen Items/Zip Lock Food Storage Freezer Bags Resealable Reusable Plastic Bags Small Large.jpg" alt="item">
+                <div class="productdes">
+                    <span class="itmName">Silicone food bags 6Pcs/Set</span>
+                    <span class="itmDesc">Material: Silicone, Brand New, Good quality, Heathy</span>
+                    <span class="rate">
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gray;">★</span>
+                        <span class="star" style="color: gray;">★</span>
+                    </span>
+                    <span class="stock">1k+ in stock</span>
+                    <span class="pricedis">
+                        <span class="price">Rs.142</span>
+                        <label style="color: gray; margin-left: 5px;">-/</label><span class="OgPrice">Rs.160</span>
+                        <span class="dis">-11%</span>
+                    </span> 
+                </div>
+                <div class="line"></div>
+                <div class="wishlistbtns">
+                    <button class="mov2cart" style="background-color: greenyellow;">Move to Cart</button>
+                    <button class="saveforlater" style="background-color: orange;">Save for Later</button>
+                    <button class="remove" style="background-color: red;">Remove</button>
+                </div>
+            </div>
+            <div class="wishitm">
+                <img src="/Product Images/Home & Cleaning items/Castile Soap • 16 fl oz.jpg" alt="item">
+                <div class="productdes">
+                    <span class="itmName">Castile Soap-Natural All-Purpose Cleaner</span>
+                    <span class="itmDesc">Natural All-Purpose Cleaner is a biodegradable, plant-oil-based soap free from harsh chemicals. It gently cleans hands, body, and surfaces while being safe for the environment and suitable for sensitive skin.</span>
+                    <span class="rate">
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gold;">★</span>
+                        <span class="star" style="color: gray;">★</span>
+                    </span>
+                    <span class="stock">1k+ in stock</span>
+                    <span class="pricedis">
+                        <span class="price">Rs.190</span>
+                        <label style="color: gray; margin-left: 5px;"></label><span class="OgPrice"></span>
+                        <span class="dis">-</span>
+                    </span> 
+                </div>
+                <div class="line"></div>
+                <div class="wishlistbtns">
+                    <button class="mov2cart" style="background-color: greenyellow;">Move to Cart</button>
+                    <button class="saveforlater" style="background-color: orange;">Save for Later</button>
+                    <button class="remove" style="background-color: red;">Remove</button>
+                </div>
+            </div>
+        </div>
+        <div class="foot"><!--Container for the footer section-->
+            <div class="secondfooter"><!--This is a container for the upper section of the footer-->
+                <div class="bottomLink"><!--Container for the logo and social media icons-->
+                    <img src="/Icons/EcoMart.png" alt="EcoMart Logo" style="width: 250px; height: 88px; position: relative; float: right; margin-top: 25px;">
+                    <div class="social"><!--Container for social media icons-->
+                        <a href="https://youtu.be/dQw4w9WgXcQ?si=kJT0Y42J-oUOEi-n">
+                            <img src="/Icons/youtube-brands-solid-full.png" alt="youtube" class="yt">
+                        </a>
+                        <a href="https://www.instagram.com/reel/CfIEj18pjAz/?igsh=MXVndTluemhuaWVreQ==">
+                            <img src="/Icons/instagram-brands-solid-full.png" alt="instagram" class="insta">
+                        </a>
+                        <a href="https://www.facebook.com/share/p/1G6SPSyAAy/">
+                            <img src="/Icons/facebook-brands-solid-full.png" alt="facebook" class="fb">
+                        </a>
+                        <a href="https://x.com/allreactionvidz/status/1249541936991604737?s=20">
+                            <img src="/Icons/square-x-twitter-brands-solid-full.png" alt="twitter" class="tweet">
+                        </a>
+                        <a href="https://pin.it/4QQPtgu0i">
+                            <img src="/Icons/pinterest-brands-solid-full.png" alt="pinterest" class="pin">
+                        </a>
+                    </div>
+                </div>
+                <div class="customerservice" style="margin-left: 200px; margin-right: auto; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><!--This is container that stores a list of pages dedicated to providing service to the customers-->
+                    <div style="font-weight: bold; color: black; margin-left: 25px; margin-top: 0px;">
+                        <h3>Customer Service</h3><!--This is the heading of the list-->
+                    </div>
+                    <ul><!--Unordered list of page hyperlinks-->
+                        <li>
+                            <a href="/Web Pages/Home-EcoMart.html" style="color: black; font-size: 18px;">Home</a>
+                        </li>
+                        <li>
+                            <a href="Products-EcoMart.html" style="color: black; font-size: 18px;">Products</a>
+                        </li>
+                        <li>
+                            <a href="Wishlist-EcoMart.html" style="color: black; font-size: 18px;">WishList</a>
+                        </li>
+                        <li>
+                            <a href="Cart-EcoMart.html" style="color: black; font-size: 18px;">Cart</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="company" style="margin-right: 450px; margin-left: auto; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><!--This is container that stores a list of pages dedicated to providing information about the company-->
+                    <div style="font-weight: bold; color: black; margin-left: 25px; margin-top: 0px;">
+                        <h3>Get to know us</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="Blog-EcoMart.html" style="color: black; font-size: 18px;">Blog</a>
+                        </li>
+                        <li>
+                            <a href="About-EcoMart.html" style="color: black; font-size: 18px;">About Us</a>
+                        </li>
+                        <li>
+                            <a href="Research-EcoMart.html" style="color: black; font-size: 18px;">Research</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright"><!--This is the lower section of the footer containing copyright information-->
+                Copyright © 2026 Ecomart Store. All Rights Reserved.
+            </div>
+        </div>
+
+        <!-- ECOMART.JS SCRIPT -->
+        <script src="EcoMart.js"></script>
+
+        <!-- WISHLIST FUNCTIONALITY SCRIPT -->
+        <script>
+            // Wishlist items data
+            const wishlistItems = [
+                {
+                    name: "Organic Cotton Face Towels",
+                    price: 1120,
+                    image: "/Product Images/Personal Care Items/The softest towels youll ever own, they dry quickly, and look good, too_.jpg",
+                    description: "Soft Absorbent Organic Cotton Washable Saliva Towel Face Wipes"
+                },
+                {
+                    name: "Solar-Powered Charger",
+                    price: 500,
+                    image: "/Product Images/Lifestyle items/Lumity_ Unlimited Power, Anytime, Anywhere.jpg",
+                    description: "Small DIY Solar Module is a compact solar panel that converts sunlight into low-voltage electricity"
+                },
+                {
+                    name: "Silicone food bags 6Pcs/Set",
+                    price: 142,
+                    image: "/Product Images/Kitchen Items/Zip Lock Food Storage Freezer Bags Resealable Reusable Plastic Bags Small Large.jpg",
+                    description: "Material: Silicone, Brand New, Good quality, Healthy"
+                },
+                {
+                    name: "Castile Soap-Natural All-Purpose Cleaner",
+                    price: 190,
+                    image: "/Product Images/Home & Cleaning items/Castile Soap • 16 fl oz.jpg",
+                    description: "Natural All-Purpose Cleaner is a biodegradable, plant-oil-based soap free from harsh chemicals"
+                }
+            ];
+
+            // Get all buttons
+            let mov = document.querySelectorAll('.mov2cart');
+            let rem = document.querySelectorAll('.remove');
+            let save = document.querySelectorAll('.saveforlater');
+
+            // Move to Cart button - Add product to cart with notification
+            mov.forEach(function(move, index){
+                move.onclick = function(){
+                    const item = wishlistItems[index];
+                    addToCart(item.name, item.price, item.image, item.description);
+                }
+            });
+
+            // Remove button - Remove from wishlist with notification
+            rem.forEach(function(remove, index){
+                remove.onclick = function(){
+                    const item = wishlistItems[index];
+                    showNotification(item.name + " has been removed from your wishlist!", "info");
+                    // Remove the element from display
+                    remove.closest('.wishitm').style.display = 'none';
+                }
+            });
+
+            // Save for Later button
+            // Save for Later button
+                saveForLaterButtons.forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const wishitemContainer = this.closest('.wishitm');
+                        if (wishitemContainer) {
+                            const productName = wishitemContainer.querySelector('.itmName')?.textContent || 'Product';
+                            
+                            // Show single notification
+                            showNotification('♥ ' + productName + ' saved for later!', 'info');
+                }})
+                });
+        </script>
+    </body>
+</html>

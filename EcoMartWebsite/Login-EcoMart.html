@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="Icon" href="/Icons/EcoMart Title(1).png" type="image/x-icon"> <!-- Sets the title picture for the webpage -->
+        <title>Login - EcoMart</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Adjusts layout for different screen sizes-->
+        <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 -->
+        <meta name="description" content="EcoMart Login Page - Login to your EcoMart account to access your wishlist, cart, and personalized recommendations.">
+        <meta name="keywords" content="eco-friendly, sustainable products, plastic-free, login, account">
+        <meta name="author" content="Bindu Adhikari">   
+        <meta name="robots" content="index, follow">
+        <link rel="stylesheet" href="EcoMart.css"> <!-- Links to external CSS file for styling -->
+        <style> /*Internal CSS*/
+            body{
+                margin: 0px;
+                padding: 0px;
+                background-image: url('/Photos/premium_photo-1661629241728-0d43f7a6a406.png');
+                background-repeat: no-repeat;
+                background-color: white;
+                background-size: cover;
+                background-attachment: fixed;
+                background-position: bottom;
+                min-height: 100%;
+                width: 100%;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            a{
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="logregbox"><!--Container to hold the form for the login and register page-->
+            <div class="logotopleft" style="margin-top: 20px;"><!--Container for the logo at the top left corner-->
+                <a href="/Web Pages/Home-EcoMart.html">
+                    <img src="/Icons/EcoMart.png" alt="EcoMart Logo" style="width: 125px; height: 44px; "> <!-- Logo image linking to home page -->
+                </a>
+            </div>
+            <div class="log">
+                <h2>Welcome back!</h2><!--Message to the user-->
+                <form><!--Form for user login-->
+                    <div class="formg">
+                        <label for="Email">Email Address:</label><!--Caption for our form input-->
+                        <input type="email" placeholder="Enter your email Address" required>
+                    </div>
+                    <div class="formg">
+                        <label for="password">Password:</label><!--Caption for our form input-->
+                        <input type="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="rem">
+                        <input type="checkbox"><label for="remember">Remember Me</label><!--This contains the "Remember me option"-->
+                    </div>
+                    <div class="lbtn"><!--This contains the button to-->
+                        <button type="submit" class="logregbtn">Login</button>
+                    </div>
+                </form>
+                <label for="2nd option" class="secopt">Or</label>
+                <a class="google"><!--This is the option to login with Google account-->
+                    <div class="googleicon"><!--This contains the Google-->
+                        <img src="/Icons/icons8-google-logo-50.png" alt="google" style="width: 22px; height: 22px;">
+                    </div>
+                    <div class="googletext">Continue with Google</div><!--This contains the text for the Google-->
+                </a>
+                <div class="opt3"><!--This contains the option to register for new users-->
+                    <label for="acc">New around here? </label>
+                    <a href="Register-EcoMart.html" style="color: rgb(0, 119, 255); text-decoration: underline;">Register</a><!--This is a hyperlink connecting to the register page-->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
